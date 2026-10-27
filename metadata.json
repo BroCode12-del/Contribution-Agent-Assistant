@@ -139,7 +139,6 @@
     "audit_file": "submission_audit.json",
     "setup_guide": "SETUP.md",
     "testing_guide": "TESTING.md",
-    "demo_script": "DEMO_SCRIPT.md",
     "checklist": "SUBMISSION_CHECKLIST.md",
     "recording_created": false,
     "official_submission_schema_verified": false,

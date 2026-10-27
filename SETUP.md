@@ -158,7 +158,7 @@ executes a local submission.
 
 ## 6. Verify and rehearse
 
-Follow `TESTING.md`, then `DEMO_SCRIPT.md`. Keep `SUBMISSION_CHECKLIST.md`
+Follow `TESTING.md`. Keep `SUBMISSION_CHECKLIST.md`
 visible when deciding readiness. Preparation of these files does not mark
 Step 10, the new-opportunity learning integration, recording, or the final
 submission complete.

@@ -90,7 +90,6 @@
   "prepared_files": [
     "SETUP.md",
     "TESTING.md",
-    "DEMO_SCRIPT.md",
     "SUBMISSION_CHECKLIST.md",
     "requirements.txt",
     ".env.example",

@@ -8,7 +8,6 @@ observed results to guide later decisions.
 
 - [SETUP.md](SETUP.md): local Python, Nightshift, Zetaris and H-MEM setup.
 - [TESTING.md](TESTING.md): offline checks versus optional live service checks.
-- [DEMO_SCRIPT.md](DEMO_SCRIPT.md): an honest rehearsal sequence; no video recorded.
 - [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md): verified work and remaining gates.
 - [metadata.json](metadata.json): provisional sponsor metadata, not an organiser-validated schema.
 
