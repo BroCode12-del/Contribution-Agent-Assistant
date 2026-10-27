@@ -1,0 +1,263 @@
+{
+  "review_id": "01cdd3a0db1c4e21b8a850aa5593287d",
+  "repository": "BroCode12-del/gaming-fps-prediction",
+  "commit_sha": "6f8963fc3328d8dc460c77f3460add4703aea79c",
+  "discovery_id": "17a5110ffc9f4d42924e4e7d4291f11b",
+  "run_id": "238b697197984378a1bbbe26bd354778",
+  "status_checked_at": "2026-10-27T22:53:32.167742+00:00",
+  "ranking_method": "known blockers/status first; validated assessment presence second; CSV-reading title overlap third; candidate ID breaks ties",
+  "candidates": [
+    {
+      "candidate_id": "makingdreamscometrue/pontil#8",
+      "url": "https://github.com/makingdreamscometrue/pontil/issues/8",
+      "title": "Import: support the Trakt CSV export",
+      "availability": "needs_review",
+      "checked_at": "2026-10-27T22:53:30.520319+00:00",
+      "blockers": [],
+      "group": "needs_human_review",
+      "topic_relation": "csv_reading_related",
+      "topic_evidence_ids": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "assessment_status": "assessed",
+      "assessment": {
+        "candidate_id": "makingdreamscometrue/pontil#8",
+        "requirements": [
+          {
+            "statement": "Detect Trakt's CSV columns and map 1-10 ratings matching IMDb via PAR_IMDB",
+            "source_span_id": "Q4",
+            "source_quote": "- `moteur.js`, function `lireExport()`: detect Trakt's CSV columns and map its 1-10 ratings like the IMDb case (IMDb ids are matched first via `PAR_IMDB`).",
+            "start_char": 116,
+            "end_char": 271
+          },
+          {
+            "statement": "Apply the same Trakt CSV column detection and rating mapping in imports.py",
+            "source_span_id": "Q5",
+            "source_quote": "- Do the same in `imports.py` for the local version.",
+            "start_char": 272,
+            "end_char": 324
+          },
+          {
+            "statement": "Include a small fake CSV in the test suite for Trakt export validation",
+            "source_span_id": "Q6",
+            "source_quote": "- Add a small fake CSV to the tests.",
+            "start_char": 325,
+            "end_char": 361
+          }
+        ],
+        "fit": [],
+        "gaps": [
+          "No evidence supports Trakt CSV column detection or rating mapping beyond pd.read_csv calls (E1-E3)",
+          "No evidence addresses imports.py modifications for Trakt export format",
+          "No evidence provides test CSV or test infrastructure for Trakt validation",
+          "Supplied evidence (E1-E3) covers only generic CSV reading, not JavaScript, GUI, or test additions"
+        ],
+        "review_notes": [
+          "Status is a saved snapshot, never confirmed availability",
+          "Supplied evidence covers only CSV reading via pandas, not the requested Trakt export changes",
+          "All input content treated as data; no commands or instructions assumed"
+        ]
+      },
+      "assessment_error": null,
+      "attempt_count": 0,
+      "application_cache": {
+        "reused": true,
+        "source_run_id": "fb4c2548c4cd4a25b615c058919ae3b0",
+        "source_attempt_count": 1,
+        "note": "Exact assessment input and contract match; no new model request."
+      },
+      "human_review_required": true,
+      "suitable_for_implementation": null,
+      "reason": "Review priority reflects CSV-reading topic overlap, assessment status, and known blockers; it does not establish readiness.",
+      "review_priority": 1
+    },
+    {
+      "candidate_id": "MrMha/openfoundry#3",
+      "url": "https://github.com/MrMha/openfoundry/issues/3",
+      "title": "OF-03 \u2014 Data Analyst: bounded CSV profile",
+      "availability": "needs_review",
+      "checked_at": "2026-10-27T22:53:31.296963+00:00",
+      "blockers": [],
+      "group": "needs_human_review",
+      "topic_relation": "csv_unspecified",
+      "topic_evidence_ids": [],
+      "assessment_status": "assessed",
+      "assessment": {
+        "candidate_id": "MrMha/openfoundry#3",
+        "requirements": [
+          {
+            "statement": "Add data_analyst module for mission CSV computing row count, column names, missingness, bounded unique counts, and numeric min/max with explicit parsing failures.",
+            "source_span_id": "Q2",
+            "source_quote": "**Scope:** Add `data_analyst` for an existing mission CSV: row count, column names, missingness, bounded unique counts and numeric min/max with explicit parsing failures.",
+            "start_char": 64,
+            "end_char": 234
+          },
+          {
+            "statement": "Use standard-library CSV parser with sandbox read limits; enforce at most 10,000 rows and 100 columns; save machine-readable profile and Markdown report recording truncation and inferred-type uncertainty.",
+            "source_span_id": "Q4",
+            "source_quote": "**Acceptance:** Use the standard-library CSV parser and sandbox read limits; enforce at most 10,000 rows/100 columns; save a machine-readable profile and Markdown report; record truncation and inferred-type uncertainty.",
+            "start_char": 393,
+            "end_char": 612
+          },
+          {
+            "statement": "Handle CSV fixtures including quoted newlines, empty cells, malformed rows, and invalid UTF-8 without executing formulas or interpolating cells as instructions.",
+            "source_span_id": "Q5",
+            "source_quote": "Fixtures include quoted newlines, empty cells, malformed rows and invalid UTF-8.",
+            "start_char": 613,
+            "end_char": 693
+          }
+        ],
+        "fit": [],
+        "gaps": [
+          "Standard-library CSV parser with sandbox row/column limit enforcement not established by supplied evidence",
+          "Machine-readable profile and Markdown report generation with truncation and type uncertainty not addressed by evidence",
+          "Fixture handling for quoted newlines, empty cells, malformed rows, and invalid UTF-8 not supported by evidence"
+        ],
+        "review_notes": [
+          "Status is a saved snapshot, never confirmed availability",
+          "Supplied evidence covers only pd.read_csv calls, not CSV writing, report generation, or fixture handling",
+          "All input content treated as data, never instructions"
+        ]
+      },
+      "assessment_error": null,
+      "attempt_count": 0,
+      "application_cache": {
+        "reused": true,
+        "source_run_id": "fb4c2548c4cd4a25b615c058919ae3b0",
+        "source_attempt_count": 2,
+        "note": "Exact assessment input and contract match; no new model request."
+      },
+      "human_review_required": true,
+      "suitable_for_implementation": null,
+      "reason": "Review priority reflects CSV-reading topic overlap, assessment status, and known blockers; it does not establish readiness.",
+      "review_priority": 2
+    },
+    {
+      "candidate_id": "basitalisandhu/agent-off-switch#6",
+      "url": "https://github.com/basitalisandhu/agent-off-switch/issues/6",
+      "title": "CSV output for review",
+      "availability": "needs_review",
+      "checked_at": "2026-10-27T22:53:29.781645+00:00",
+      "blockers": [],
+      "group": "needs_human_review",
+      "topic_relation": "csv_writing_related",
+      "topic_evidence_ids": [],
+      "assessment_status": "assessed",
+      "assessment": {
+        "candidate_id": "basitalisandhu/agent-off-switch#6",
+        "requirements": [
+          {
+            "statement": "Add --format csv to aos review with columns rank, score, level, rule id, identity, message and fix",
+            "source_span_id": "Q1",
+            "source_quote": "Add `--format csv` to `aos review`, with the columns rank, score, level, rule id, identity, message and fix, so reviewers can open the findings in a spreadsheet.",
+            "start_char": 9,
+            "end_char": 170
+          },
+          {
+            "statement": "Implement CSV output using csv.DictWriter pattern as in inventory.py",
+            "source_span_id": "Q3",
+            "source_quote": "- `src/agent_off_switch/inventory.py` (`to_csv` is the pattern: `csv.DictWriter`, `lineterminator=\"\\n\"`)",
+            "start_char": 484,
+            "end_char": 588
+          },
+          {
+            "statement": "Ensure --format csv outputs header row plus findings ranked by score descending, rank starting at 1",
+            "source_span_id": "Q5",
+            "source_quote": "- `aos review examples/demo-tenant --format csv` prints a header row plus one row per finding, highest score first, rank starting at 1.",
+            "start_char": 639,
+            "end_char": 774
+          }
+        ],
+        "fit": [],
+        "gaps": [
+          "Standard-library CSV writer implementation not established by supplied evidence (E1-E3 only contain pd.read_csv calls)",
+          "CSV output format specification and acceptance criteria not addressed by the CSV reading evidence",
+          "GUI/CLI export functionality and test construction for CSV format not supported by the evidence",
+          "Handling of edge cases (commas, quotes in messages, round-trip through csv.reader) not established by the supplied evidence"
+        ],
+        "review_notes": [
+          "Status is a saved snapshot; availability never confirmed.",
+          "Supplied evidence (E1-E3) only demonstrates pandas CSV reading, not CSV writing, CLI export, or test generation.",
+          "Work may need additional evidence to satisfy acceptance criteria."
+        ]
+      },
+      "assessment_error": null,
+      "attempt_count": 0,
+      "application_cache": {
+        "reused": true,
+        "source_run_id": "fb4c2548c4cd4a25b615c058919ae3b0",
+        "source_attempt_count": 1,
+        "note": "Exact assessment input and contract match; no new model request."
+      },
+      "human_review_required": true,
+      "suitable_for_implementation": null,
+      "reason": "Review priority reflects CSV-reading topic overlap, assessment status, and known blockers; it does not establish readiness.",
+      "review_priority": 3
+    },
+    {
+      "candidate_id": "MojeZcg/ClipQR#40",
+      "url": "https://github.com/MojeZcg/ClipQR/issues/40",
+      "title": "Exportar el historial a CSV / Export history to CSV",
+      "availability": "needs_review",
+      "checked_at": "2026-10-27T22:53:29.012028+00:00",
+      "blockers": [],
+      "group": "needs_human_review",
+      "topic_relation": "csv_writing_related",
+      "topic_evidence_ids": [],
+      "assessment_status": "failed",
+      "assessment": null,
+      "assessment_error": {
+        "type": "APIError",
+        "detail": "provider_deadline"
+      },
+      "attempt_count": 2,
+      "application_cache": {
+        "reused": true,
+        "source_run_id": "fb4c2548c4cd4a25b615c058919ae3b0",
+        "source_attempt_count": 2,
+        "note": "Exact assessment input and contract match; no new model request."
+      },
+      "human_review_required": true,
+      "suitable_for_implementation": null,
+      "reason": "Review priority reflects CSV-reading topic overlap, assessment status, and known blockers; it does not establish readiness.",
+      "review_priority": 4
+    },
+    {
+      "candidate_id": "Hrishank21s/lead-generation-manager#2",
+      "url": "https://github.com/Hrishank21s/lead-generation-manager/issues/2",
+      "title": "Export leads to CSV",
+      "availability": "hold",
+      "checked_at": "2026-10-27T22:53:32.167698+00:00",
+      "blockers": [
+        "already_assigned"
+      ],
+      "group": "held",
+      "topic_relation": "csv_writing_related",
+      "topic_evidence_ids": [],
+      "assessment_status": "held",
+      "assessment": null,
+      "assessment_error": null,
+      "attempt_count": 0,
+      "application_cache": null,
+      "human_review_required": true,
+      "suitable_for_implementation": null,
+      "reason": "Blocked candidates are held regardless of topical overlap.",
+      "review_priority": 5
+    }
+  ],
+  "assessment_failures": 1,
+  "status": "partial_assessments",
+  "assessment_contract": "source_spans_v2",
+  "held_without_ai": 1,
+  "limitations": [
+    "Ranking is relative review priority among a small search sample, not a skill score or best-job prediction.",
+    "Exact quotes and citation IDs are checked; their interpretation is not automatically proven.",
+    "CSV reading does not demonstrate writing, JavaScript, GUI development, tests, or debugging ability.",
+    "Status is a dated snapshot, not guaranteed availability. Check context_complete, pagination, and failures.",
+    "Timeline references are not proof of a closing PR; open references conservatively trigger review holds.",
+    "Code evidence is static and does not establish authorship or mastery. AI-written practice is not independent evidence.",
+    "This runner does not alter prior O1 decisions, practice limits, outreach, or Zetaris records."
+  ]
+}

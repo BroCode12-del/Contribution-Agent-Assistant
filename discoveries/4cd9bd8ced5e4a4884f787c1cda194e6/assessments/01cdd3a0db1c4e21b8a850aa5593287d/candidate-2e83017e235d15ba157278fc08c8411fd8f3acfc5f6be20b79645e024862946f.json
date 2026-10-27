@@ -1,0 +1,38 @@
+{
+  "review_id": "01cdd3a0db1c4e21b8a850aa5593287d",
+  "discovery_id": "4cd9bd8ced5e4a4884f787c1cda194e6",
+  "repository": "BroCode12-del/gaming-fps-prediction",
+  "commit_sha": "6f8963fc3328d8dc460c77f3460add4703aea79c",
+  "candidate_id": "MojeZcg/ClipQR#40",
+  "candidate_url": "https://github.com/MojeZcg/ClipQR/issues/40",
+  "availability": "needs_review",
+  "availability_checked_at": "2026-10-27T15:48:52.233462+00:00",
+  "blockers": [],
+  "assessment": {
+    "candidate_id": "MojeZcg/ClipQR#40",
+    "requirements": [
+      {
+        "statement": "Export CSV button in the history window with date, type, text and main value of each code",
+        "source_quote": "An **Export CSV** button in the history window (`clipqr/ui/history.py`), with the date, type, text and main value of each code."
+      },
+      {
+        "statement": "Include a test for the CSV format",
+        "source_quote": "Include a test for the CSV format."
+      }
+    ],
+    "fit": [],
+    "gaps": [
+      "CSV export/write functionality not established by supplied evidence",
+      "GUI export button implementation not established by supplied evidence",
+      "CSV format test construction not established by supplied evidence"
+    ],
+    "review_notes": [
+      "Evidence E1-E3 only contain pd.read_csv calls for loading CSV data",
+      "No connection established to ClipQR history CSV export requirements",
+      "Availability is needs_review (saved snapshot)"
+    ]
+  },
+  "validation": "structure_citation_ids_and_exact_quotes_checked",
+  "human_review_required": true,
+  "capture_method": "user_pasted_successful_model_response"
+}

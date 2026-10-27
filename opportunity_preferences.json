@@ -1,0 +1,12 @@
+{
+    "opportunity_type": "open_source_contribution",
+    "language": "Python",
+    "topics": ["pandas", "CSV", "data loading"],
+    "preferred_labels": ["good first issue", "help wanted"],
+    "max_candidates": 5,
+    "exclude_pull_requests": true,
+    "require_open_issue": true,
+    "blocked_labels": ["Needs Discussion"],
+    "goal": "Find a small contribution to investigate; do not assume implementation readiness."
+  }
+  

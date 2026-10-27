@@ -1,0 +1,69 @@
+{
+  "discovery_id": "17a5110ffc9f4d42924e4e7d4291f11b",
+  "saved_at": "2026-10-27T16:35:17.273043+00:00",
+  "preferences": {
+    "opportunity_type": "open_source_contribution",
+    "language": "Python",
+    "topics": [
+      "pandas",
+      "CSV",
+      "data loading"
+    ],
+    "preferred_labels": [
+      "good first issue",
+      "help wanted"
+    ],
+    "max_candidates": 5,
+    "exclude_pull_requests": true,
+    "require_open_issue": true,
+    "blocked_labels": [
+      "Needs Discussion"
+    ],
+    "goal": "Find a small contribution to investigate; do not assume implementation readiness."
+  },
+  "searches": [
+    {
+      "query": "is:issue is:open language:Python CSV label:\"good first issue\"",
+      "total_count": 1423,
+      "incomplete_results": false,
+      "more_pages": true
+    },
+    {
+      "query": "is:issue is:open language:Python CSV label:\"help wanted\"",
+      "total_count": 1472,
+      "incomplete_results": false,
+      "more_pages": true
+    }
+  ],
+  "search_failures": [],
+  "candidates": [
+    {
+      "repository": "MojeZcg/ClipQR",
+      "issue_number": 40,
+      "candidate_id": "MojeZcg/ClipQR#40"
+    },
+    {
+      "repository": "basitalisandhu/agent-off-switch",
+      "issue_number": 6,
+      "candidate_id": "basitalisandhu/agent-off-switch#6"
+    },
+    {
+      "repository": "makingdreamscometrue/pontil",
+      "issue_number": 8,
+      "candidate_id": "makingdreamscometrue/pontil#8"
+    },
+    {
+      "repository": "MrMha/openfoundry",
+      "issue_number": 3,
+      "candidate_id": "MrMha/openfoundry#3"
+    },
+    {
+      "repository": "Hrishank21s/lead-generation-manager",
+      "issue_number": 2,
+      "candidate_id": "Hrishank21s/lead-generation-manager#2"
+    }
+  ],
+  "limitations": [
+    "Two preferred-label CSV queries, first pages only, maximum five unique candidates."
+  ]
+}

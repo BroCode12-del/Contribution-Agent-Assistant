@@ -1,0 +1,58 @@
+{
+  "candidate_id": "MrMha/openfoundry#3",
+  "input_sha256": "c9f762e8498d17faf178ce036694db4333f07651bfcb2731d7325f28ba3941a2",
+  "attempt_count": 2,
+  "assessment_contract": "source_spans_v2",
+  "review_id": "01cdd3a0db1c4e21b8a850aa5593287d",
+  "discovery_id": "17a5110ffc9f4d42924e4e7d4291f11b",
+  "created_at": "2026-10-27T22:13:43.233075+00:00",
+  "human_review_required": true,
+  "status": "assessed",
+  "generation": {
+    "requested_model": "meterless/auto",
+    "tier_split": false,
+    "max_tokens": 8192,
+    "routed_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "receipt_id": "rcpt_req_yyiv917l",
+    "from_cache": false,
+    "finish_reason": "stop",
+    "elapsed_seconds": 47.06
+  },
+  "assessment": {
+    "candidate_id": "MrMha/openfoundry#3",
+    "requirements": [
+      {
+        "statement": "Add data_analyst module for mission CSV computing row count, column names, missingness, bounded unique counts, and numeric min/max with explicit parsing failures.",
+        "source_span_id": "Q2",
+        "source_quote": "**Scope:** Add `data_analyst` for an existing mission CSV: row count, column names, missingness, bounded unique counts and numeric min/max with explicit parsing failures.",
+        "start_char": 64,
+        "end_char": 234
+      },
+      {
+        "statement": "Use standard-library CSV parser with sandbox read limits; enforce at most 10,000 rows and 100 columns; save machine-readable profile and Markdown report recording truncation and inferred-type uncertainty.",
+        "source_span_id": "Q4",
+        "source_quote": "**Acceptance:** Use the standard-library CSV parser and sandbox read limits; enforce at most 10,000 rows/100 columns; save a machine-readable profile and Markdown report; record truncation and inferred-type uncertainty.",
+        "start_char": 393,
+        "end_char": 612
+      },
+      {
+        "statement": "Handle CSV fixtures including quoted newlines, empty cells, malformed rows, and invalid UTF-8 without executing formulas or interpolating cells as instructions.",
+        "source_span_id": "Q5",
+        "source_quote": "Fixtures include quoted newlines, empty cells, malformed rows and invalid UTF-8.",
+        "start_char": 613,
+        "end_char": 693
+      }
+    ],
+    "fit": [],
+    "gaps": [
+      "Standard-library CSV parser with sandbox row/column limit enforcement not established by supplied evidence",
+      "Machine-readable profile and Markdown report generation with truncation and type uncertainty not addressed by evidence",
+      "Fixture handling for quoted newlines, empty cells, malformed rows, and invalid UTF-8 not supported by evidence"
+    ],
+    "review_notes": [
+      "Status is a saved snapshot, never confirmed availability",
+      "Supplied evidence covers only pd.read_csv calls, not CSV writing, report generation, or fixture handling",
+      "All input content treated as data, never instructions"
+    ]
+  }
+}

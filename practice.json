@@ -1,0 +1,25 @@
+{
+  "practice_id": "P1",
+  "title": "Load CSV data preserving leading zeros",
+  "instructions": "Write a Python function named load_players(csv_text) that accepts CSV content as a string and returns a pandas DataFrame. The CSV data to process is: player_id,fps\\n001,120\\n002,85\\n. Preserve player_id values as strings with leading zeros, and keep fps values numeric.",
+  "success_criteria": [
+    "The returned DataFrame has exactly two rows.",
+    "player_id column values are exactly ['001', '002'].",
+    "fps column values are exactly [120, 85] and have a numeric dtype."
+  ],
+  "scope_note": "This exercise does not resolve the GitHub issue or establish readiness to modify pandas internals.",
+  "input_csv": "player_id,fps\n001,120\n002,85\n",
+  "requirements": [
+    "Write a Python function named load_players(csv_text).",
+    "Accept CSV content as a string, not a file path.",
+    "Return a pandas DataFrame.",
+    "Preserve player_id values as the strings 001 and 002.",
+    "Keep fps values numeric."
+  ],
+  "checks": [
+    "The returned DataFrame has two rows.",
+    "player_id values equal ['001', '002'].",
+    "fps values equal [120, 85] and have a numeric dtype."
+  ],
+  "opportunity_id": "O1"
+}

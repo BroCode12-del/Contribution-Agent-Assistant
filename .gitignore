@@ -1,0 +1,13 @@
+.env
+.venv/
+__pycache__/
+.env.*
+!.env.example
+node_modules/
+.hmem/
+*.log
+.pytest_cache/
+reviews/*/source/
+learning_flows/
+*.zip
+submission_assets/

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contribution Agent</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="#">◈ Contribution Agent</a><span class="pill">Local hackathon prototype</span></header>
+  <main>
+    <div class="hero"><p class="eyebrow">A next step grounded in evidence</p><h1>Find a contribution.<br>Understand your next step.</h1><p>Review public Python code, explore real issues, and use practice feedback to make a more honest recommendation.</p></div>
+    <nav aria-label="Project flow"><a href="#repository">1 · Repository</a><a href="#evidence">2 · Evidence</a><a href="#opportunities">3 · Opportunities</a><a href="#learning">4 · Practice</a><a href="#learning-decision">5 · Next step</a><a href="#learning-outreach">6 · Draft</a></nav>
+    <div id="job" class="notice" role="status" aria-live="polite">Loading saved results…</div>
+    <section id="repository"><div class="section-heading"><div><p class="eyebrow">01 / Start with code</p><h2>Your repository</h2></div><span class="pill">Python · Open-source contributions</span></div>
+      <form id="repository-form"><label for="repository-url">Public GitHub repository URL</label><div class="input-row"><input id="repository-url" type="url" required placeholder="https://github.com/owner/repository" value="https://github.com/BroCode12-del/gaming-fps-prediction"><button type="submit">Fetch & collect evidence</button></div></form>
+      <p class="muted">Downloads a bounded selection of Python files at a pinned commit. Repository code is read, never executed.</p>
+      <label for="review-select">Or open a saved review</label><div class="input-row"><select id="review-select"></select><button id="reload" class="secondary">Refresh saved results</button></div>
+      <p id="review-meta" class="muted"></p>
+    </section>
+    <section id="evidence"><div class="section-heading"><div><p class="eyebrow">02 / Inspect the source</p><h2>Evidence & observations</h2></div><button id="analyse" class="secondary">Request Nightshift analysis</button></div>
+      <p id="analysis-state" class="muted"></p><div id="observations"></div>
+      <details><summary>Scan coverage and limitations</summary><div id="coverage"></div><ul id="limitations"></ul></details>
+    </section>
+    <section id="opportunities"><div class="section-heading"><div><p class="eyebrow">03 / Explore possible contributions</p><h2>Opportunities to investigate</h2></div><button id="discover" class="secondary">Search GitHub & check status</button></div>
+      <p class="muted">Small CSV-topic search sample. Review priority is not a suitability score. Status checks are dated snapshots.</p><p id="ranking-state"></p><div id="candidates"></div>
+    </section>
+    <section id="learning">
+      <p class="eyebrow">04 / Connected learning flow</p><h2>Practice for your selected opportunity</h2>
+      <p id="learning-empty">Choose “Start connected practice” on a validated, unblocked candidate above.</p>
+      <div id="learning-content" hidden>
+        <label for="learning-select">Saved flows for this repository review</label><select id="learning-select"></select>
+        <p id="learning-binding" class="muted"></p><h3 id="learning-title"></h3><p id="learning-instructions"></p>
+        <pre id="learning-csv"></pre><ul id="learning-criteria"></ul><p id="learning-scope" class="muted"></p>
+        <form id="learning-form"><label for="learning-answer">Your resulting records as JSON</label>
+          <textarea id="learning-answer" rows="6" placeholder='[{"external_id":"...","rating":0}]'></textarea>
+          <label for="learning-origin">Assistance used</label><select id="learning-origin"><option value="unverified">Unverified / not declared</option><option value="self_reported_independent">I report doing this myself (not verified)</option><option value="ai_assisted">AI-assisted</option></select>
+          <p><button id="learning-submit" type="submit">Check output & revise recommendation</button></p>
+        </form>
+        <details><summary>Demonstrate feedback with clearly labeled AI references</summary><p>These examples are AI-written references, not independent learner attempts. Each distinct example consumes an attempt.</p><div class="input-row"><button id="learning-wrong" class="secondary">Try reference that loses leading zeros</button><button id="learning-correct" class="secondary">Try correct AI reference</button></div></details>
+        <h3>Measured feedback</h3><p id="learning-budget"></p><div id="learning-attempts"></div>
+        <h3 id="learning-decision">Revised recommendation</h3><div id="learning-next"></div><p id="learning-followup" class="muted"></p>
+        <h3>H-MEM assistance history</h3><div id="learning-memory"></div>
+        <h3>Zetaris evidence + opportunity join</h3><p id="learning-zetaris"></p><button id="learning-sync" class="secondary">Retry this flow's Zetaris query</button><details><summary>Inspect joined records</summary><pre id="learning-joined"></pre></details>
+        <h3 id="learning-outreach">Private outreach draft for this opportunity</h3><blockquote id="learning-draft"></blockquote><ul id="learning-disclosures"></ul><button disabled data-permanent="true">Sending unavailable</button>
+      </div>
+    </section>
+    <details id="legacy-demo"><summary>Earlier O1 example — saved separately</summary>
+    <div class="demo-boundary"><span class="pill">Saved O1 demo</span><h2>Practice → feedback → revised decision → draft</h2><p>The following flow belongs to the original pandas issue O1 and its original sample evidence. It is separate from the repository selected above. New discoveries are not automatically linked to these records.</p><p id="demo-opportunity"></p></div>
+    <section id="practice"><p class="eyebrow">04 / Learn through a small task</p><h2 id="practice-title">Practice</h2><p id="practice-instructions"></p><pre id="practice-input"></pre><ul id="practice-criteria"></ul><p id="practice-scope" class="muted"></p>
+      <div class="two-column"><article><h3>Recorded reference results</h3><div id="practice-results"></div></article><article><h3>Recorded follow-up results</h3><div id="followup-results"></div></article></div>
+      <h3>Feedback</h3><p id="feedback-summary"></p><ul id="feedback-limits"></ul>
+      <details><summary>How to try the follow-up yourself</summary><p>Edit <code>independent_submission.py</code> locally, then run <code>python check_followup.py</code>. Refresh this page to inspect the result. This page does not execute submitted code. An unverified origin is not proof of independence; the saved three-attempt limit remains in effect.</p><pre id="followup-task"></pre></details>
+    </section>
+    <section id="decision"><div class="section-heading"><div><p class="eyebrow">05 / Let feedback change the next step</p><h2>Revised recommendation</h2></div><button id="memory" class="secondary">Recall H-MEM history</button></div><div id="agent-decision"></div><p class="muted">Passing an AI-written reference does not establish independent ability. Recalling memory does not override the opportunity hold or reset attempts.</p><div id="memory-result"></div></section>
+    <section id="outreach"><p class="eyebrow">06 / Keep claims honest</p><h2>Private outreach draft</h2><p class="pill">O1 · Hold · Private review only</p><blockquote id="draft"></blockquote><ul id="draft-notes"></ul><button disabled>Sending unavailable</button><p class="muted">This interface does not send messages. Source IDs here refer to the original O1 demo, not a newly selected review.</p></section>
+    </details>
+    <section><div class="section-heading"><h2>Connected tools</h2><button id="zetaris" class="secondary">Check Zetaris connection</button></div><div class="two-column"><div><h3>Nightshift</h3><p>Primary AI provider. Requests may hit the known 45-second upstream deadline. Failures remain visible.</p></div><div><h3>Zetaris + H-MEM</h3><p>Zetaris joins evidence with the selected opportunity. H-MEM preserves assistance history and changes the next learning decision.</p></div></div><p id="zetaris-result" class="muted">Connection has not been checked in this browser session.</p></section>
+  </main><footer>Evidence supports observations, not claims of authorship, execution, or mastery.</footer>
+</body>
+</html>

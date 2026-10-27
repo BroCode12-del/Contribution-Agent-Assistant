@@ -1,0 +1,53 @@
+{
+  "practice_id": "P1",
+  "opportunity_id": "O1",
+  "observed_results": {
+    "practice_id": "P1",
+    "submission_sha256": "4025122facfa3554205062534a5cbb82189a45924acac413b947df975ed18176",
+    "practice_sha256": "c20e95757633c48d153f406c643a95513a57e2144655cb4b19b8bcc9edec3848",
+    "submission_origin": "ai_written_reference",
+    "independent_ability_established": false,
+    "checks": [
+      {
+        "name": "Returns a pandas DataFrame",
+        "passed": true
+      },
+      {
+        "name": "Has two rows",
+        "passed": true
+      },
+      {
+        "name": "Preserves identifier strings",
+        "passed": true
+      },
+      {
+        "name": "Keeps expected numeric FPS values",
+        "passed": true
+      }
+    ],
+    "error": null,
+    "all_passed": true
+  },
+  "independent_ability_established": false,
+  "opportunity_decision": "hold",
+  "scope_note": "This exercise does not resolve the GitHub issue or establish readiness to modify pandas internals.",
+  "explanation": {
+    "practice_id": "P1",
+    "summary": "The submission (ai_written_reference) passed 4 of 4 recorded checks on the supplied input. This does not establish the learner's independent ability.",
+    "check_names": [
+      "Returns a pandas DataFrame",
+      "Has two rows",
+      "Preserves identifier strings",
+      "Keeps expected numeric FPS values"
+    ],
+    "limitations": [
+      "The checker executed the local submission; this is runtime evidence for that code and input only.",
+      "The recorded AI-written reference is not an independent learner submission; other origins remain unverified.",
+      "One fixed input does not establish general correctness or mastery.",
+      "This exercise does not test or resolve the issue's integer-column-name ambiguity.",
+      "Opportunity availability is a saved snapshot; the existing decision is preserved."
+    ],
+    "next_step": "Recommend an independent attempt on a similar CSV loading exercise to verify the ability to handle dtypes and leading zeros without AI assistance."
+  },
+  "validation_note": "Structure and check references validated; prose is not automatically verified."
+}

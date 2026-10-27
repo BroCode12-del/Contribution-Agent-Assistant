@@ -1,0 +1,24 @@
+{
+  "practice_id": "P1-independent-1",
+  "parent_practice_id": "P1",
+  "opportunity_id": "O1",
+  "trigger_submission": "c20e95757633c48d153f406c643a95513a57e2144655cb4b19b8bcc9edec3848:4025122facfa3554205062534a5cbb82189a45924acac413b947df975ed18176",
+  "generation_method": "fixed_template_selected_by_agent_rule",
+  "title": "Independent CSV identifier practice",
+  "instructions": "Create independent_submission.py with a function named load_players(csv_text). Accept CSV text and return a pandas DataFrame. Preserve player_id values as strings with leading zeros and keep fps numeric. Attempt it yourself; record any assistance honestly. This task does not establish independent ability until a submission and its assistance are reviewed.",
+  "input_csv": "player_id,fps\n007,98\n042,144\n",
+  "expected": {
+    "row_count": 2,
+    "player_id": [
+      "007",
+      "042"
+    ],
+    "fps": [
+      98,
+      144
+    ],
+    "fps_numeric": true
+  },
+  "submission_file": "independent_submission.py",
+  "scope_note": "A related CSV exercise, not a fix for the GitHub issue. The existing opportunity decision remains unchanged."
+}

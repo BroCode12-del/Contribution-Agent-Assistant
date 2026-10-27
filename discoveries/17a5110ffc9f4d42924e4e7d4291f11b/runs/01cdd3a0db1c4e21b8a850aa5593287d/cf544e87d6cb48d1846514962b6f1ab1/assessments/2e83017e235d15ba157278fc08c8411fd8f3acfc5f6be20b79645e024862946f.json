@@ -1,0 +1,17 @@
+{
+  "candidate_id": "MojeZcg/ClipQR#40",
+  "input_sha256": "73cbca04c90eb6fe372cdf97c3f381991bc7492b9ca029dd01b24b69683b190a",
+  "attempt_count": 2,
+  "review_id": "01cdd3a0db1c4e21b8a850aa5593287d",
+  "discovery_id": "17a5110ffc9f4d42924e4e7d4291f11b",
+  "created_at": "2026-10-27T21:43:37.362506+00:00",
+  "human_review_required": true,
+  "generation": {
+    "requested_model": "meterless/auto",
+    "tier_split": false
+  },
+  "status": "failed",
+  "error": {
+    "type": "APIError"
+  }
+}

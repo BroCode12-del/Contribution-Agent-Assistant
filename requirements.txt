@@ -1,0 +1,4 @@
+# Direct dependencies pinned to the versions exercised on the demo machine.
+openai==3.36.0
+pandas==3.1.0
+python-dotenv==1.2.4

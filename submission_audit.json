@@ -1,0 +1,112 @@
+{
+  "audited_at": "2026-10-27T22:20:29.123800+00:00",
+  "stage": "step12_preparation",
+  "ready_for_submission": false,
+  "checks": [
+    {
+      "name": "preparation_files_present",
+      "passed": true,
+      "detail": "Documentation and setup files exist; recording is not created."
+    },
+    {
+      "name": "environment_template_has_no_credentials",
+      "passed": true,
+      "detail": "Only blank credential slots are present; real .env values were not copied."
+    },
+    {
+      "name": "ignore_rules_prepared",
+      "passed": true,
+      "detail": "Ignore rules exist. Git index protection is not verified: project is not a Git repository."
+    },
+    {
+      "name": "limited_frontend_key_pattern_scan",
+      "passed": true,
+      "detail": "Limited common-key-prefix scan of three browser assets only; not a comprehensive secret audit."
+    },
+    {
+      "name": "hashes_practice_results.json",
+      "passed": true,
+      "detail": "Saved fixed-input results remain bound to their task and source."
+    },
+    {
+      "name": "assistance_practice_results.json",
+      "passed": true,
+      "detail": "AI-written reference is not independent learner evidence."
+    },
+    {
+      "name": "hashes_followup_results.json",
+      "passed": true,
+      "detail": "Saved fixed-input results remain bound to their task and source."
+    },
+    {
+      "name": "assistance_followup_results.json",
+      "passed": true,
+      "detail": "AI-written reference is not independent learner evidence."
+    },
+    {
+      "name": "attempt_cap_preserved",
+      "passed": true,
+      "detail": "Recorded stop/hold remains preserved; no practice script was executed against real state."
+    },
+    {
+      "name": "outreach_private_and_unsent",
+      "passed": true,
+      "detail": "No messages sent or approval inferred."
+    },
+    {
+      "name": "live_step10_limitations_preserved",
+      "passed": true,
+      "detail": "Latest v2 run: five checked, three source-span assessments, one held before AI, one exhausted provider timeout. Interpretation still requires review."
+    },
+    {
+      "name": "sponsors_documented",
+      "passed": true,
+      "detail": "Sponsor use is described; organiser metadata schema remains unverified."
+    }
+  ],
+  "offline_unittest_count": 100,
+  "offline_unittest_passed": true,
+  "decision_loop_fixture_tests_passed": true,
+  "frontend_syntax_check_passed": true,
+  "live_zetaris_join": {
+    "passed": true,
+    "expected_records": 3,
+    "evidence_ids": [
+      "E1",
+      "E2",
+      "E3"
+    ],
+    "opportunity_id": "O1",
+    "scope": "Original saved sample, not new discoveries"
+  },
+  "isolated_python_install": {
+    "status": "passed",
+    "platform": "Windows / Python 3.14",
+    "offline_tests_passed": 100,
+    "pip_check": "No broken requirements found.",
+    "resolved_dependencies": "requirements-lock.txt",
+    "scope": "Python only; complete clean-machine service setup remains pending."
+  },
+  "prepared_files": [
+    "SETUP.md",
+    "TESTING.md",
+    "DEMO_SCRIPT.md",
+    "SUBMISSION_CHECKLIST.md",
+    "requirements.txt",
+    ".env.example",
+    "zetaris_join.sql",
+    "requirements-lock.txt"
+  ],
+  "pending": [
+    "Disclose intermittent provider errors for one candidate",
+    "Human demonstration recording",
+    "GitHub repository publication after confirmation",
+    "Verify organiser submission fields and attach required links"
+  ],
+  "external_actions": {
+    "submitted": false,
+    "outreach_sent": false
+  },
+  "connected_flow_verification": "connected_demo_verification.json",
+  "core_demo_verified": true
+}

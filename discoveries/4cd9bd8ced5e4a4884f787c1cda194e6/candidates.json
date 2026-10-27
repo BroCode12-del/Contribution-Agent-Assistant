@@ -1,0 +1,116 @@
+{
+  "discovery_id": "4cd9bd8ced5e4a4884f787c1cda194e6",
+  "saved_at": "2026-10-27T15:48:53.303495+00:00",
+  "query": "is:issue is:open language:Python CSV label:\"good first issue\"",
+  "preferences": {
+    "opportunity_type": "open_source_contribution",
+    "language": "Python",
+    "topics": [
+      "pandas",
+      "CSV",
+      "data loading"
+    ],
+    "preferred_labels": [
+      "good first issue",
+      "help wanted"
+    ],
+    "max_candidates": 5,
+    "exclude_pull_requests": true,
+    "require_open_issue": true,
+    "blocked_labels": [
+      "Needs Discussion"
+    ],
+    "goal": "Find a small contribution to investigate; do not assume implementation readiness."
+  },
+  "reported_matches": 1425,
+  "incomplete_results": false,
+  "candidates": [
+    {
+      "candidate_id": "MojeZcg/ClipQR#40",
+      "repository": "MojeZcg/ClipQR",
+      "issue_number": 40,
+      "url": "https://github.com/MojeZcg/ClipQR/issues/40",
+      "title": "Exportar el historial a CSV / Export history to CSV",
+      "body": "**ES:** Un bot\u00f3n **Exportar CSV** en la ventana del historial (`clipqr/ui/history.py`), con fecha, tipo, texto y dato principal de cada c\u00f3digo. Los datos privados (DNI, tarjetas de embarque) ya no est\u00e1n en el historial. Con un test del formato del CSV.\n\n**EN:** An **Export CSV** button in the history window (`clipqr/ui/history.py`), with the date, type, text and main value of each code. Private data (ID cards, boarding passes) is already excluded from history. Include a test for the CSV format.",
+      "state": "open",
+      "labels": [
+        "enhancement",
+        "good first issue"
+      ],
+      "blockers": [],
+      "availability": "needs_review",
+      "checked_at": "2026-10-27T15:48:52.233462+00:00"
+    },
+    {
+      "candidate_id": "makingdreamscometrue/pontil#8",
+      "repository": "makingdreamscometrue/pontil",
+      "issue_number": 8,
+      "url": "https://github.com/makingdreamscometrue/pontil/issues/8",
+      "title": "Import: support the Trakt CSV export",
+      "body": "Netflix, IMDb and Letterboxd exports are recognised. Trakt is a common tracker for films and shows.\n\n**What to do**\n- `moteur.js`, function `lireExport()`: detect Trakt's CSV columns and map its 1-10 ratings like the IMDb case (IMDb ids are matched first via `PAR_IMDB`).\n- Do the same in `imports.py` for the local version.\n- Add a small fake CSV to the tests.",
+      "state": "open",
+      "labels": [
+        "good first issue"
+      ],
+      "blockers": [],
+      "availability": "needs_review",
+      "checked_at": "2026-10-27T15:48:52.614147+00:00"
+    },
+    {
+      "candidate_id": "Hrishank21s/lead-generation-manager#2",
+      "repository": "Hrishank21s/lead-generation-manager",
+      "issue_number": 2,
+      "url": "https://github.com/Hrishank21s/lead-generation-manager/issues/2",
+      "title": "Export leads to CSV",
+      "body": "Export every lead to a CSV file, so owners can open their pipeline in a spreadsheet or back it up.\n\n## Requirements\n\n1. **CLI:** `python3 leadgen.py export` writes CSV to stdout, so this works:\n   `python3 leadgen.py export > leads.csv`\n   - Use the stdlib `csv` module. No third-party dependencies (see CONTRIBUTING.md).\n   - The first row is a header. Include **every column of the `leads` table**, in table order. Read the\n     columns from the database (for example `PRAGMA table_info(leads)` or `cursor.description`), not\n     from a hard-coded list, so columns added later are exported too.\n   - One row per lead, ordered by `id`.\n   - Multi-line fields (research, pitch, brief...) must stay in one cell: let `csv.writer` quote them.\n   - Show `export` in the usage text (the module docstring at the top of `leadgen.py`).\n2. **Download link (optional, welcome):** a \"Download CSV\" link on the Leads page served at\n   `GET /leads.csv`, with `Content-Type: text/csv; charset=utf-8` and\n   `Content-Disposition: attachment; filename=\"leads.csv\"`. Build the CSV with the **same function** as\n   the CLI. Don't write the logic twice.\n\n## Security checks (required)\n\n- `GET /leads.csv` must go through the existing `ok_origin()` check in `do_GET`, like every other route.\n  Don't add a route that skips it: this file holds every lead's contact details.\n- **CSV formula injection:** lead data comes from the web. Any cell that starts with `=`, `+`, `-`, `@`,\n  a tab or a carriage return must be prefixed with a single quote `'`, so Excel or Sheets doesn't run it\n  as a formula. Example: `=HYPERLINK(...)` becomes `'=HYPERLINK(...)`.\n- Don't log or write the export anywhere except stdout or the HTTP response.\n\n## Acceptance criteria\n\n- [ ] `python3 leadgen.py export` prints a header plus one row per lead, with all `leads` columns.\n- [ ] A lead whose notes span several lines round-trips through `csv.reader` unchanged.\n- [ ] A cell starting with `=` is exported with a leading `'`.\n- [ ] If the download link is added: `/leads.csv` returns 200 with a CSV attachment, and 403 when the\n      `Host` header is foreign (the same check as `test_cross_site_and_rebinding_blocked`).\n- [ ] No new dependencies; `leadgen.py` stays a single stdlib-only file.\n- [ ] README mentions the command (CLI section) and CHANGELOG has an `Unreleased` entry.\n\n## Testing\n\n- Add tests to `tests/test_leadgen.py` (they use a temp DB and never call Claude). Cover:\n  - the header and column set;\n  - the multi-line round-trip;\n  - the formula-injection prefix;\n  - the `/leads.csv` 200/403 cases, if you add the route.\n- Run `python3 -m unittest discover tests -v` locally. CI (ubuntu and macOS, Python 3.11 to 3.13) must\n  be green on the PR.\n\n## Out of scope\n\nImport from CSV, filtering the export by status, and other formats (JSON, XLSX). Open a separate issue\nif you want one of these.\n",
+      "state": "open",
+      "labels": [
+        "good first issue"
+      ],
+      "blockers": [
+        "already_assigned"
+      ],
+      "availability": "hold",
+      "checked_at": "2026-10-27T15:48:52.839707+00:00"
+    },
+    {
+      "candidate_id": "MikeRiveira/domain-security-checker#3",
+      "repository": "MikeRiveira/domain-security-checker",
+      "issue_number": 3,
+      "url": "https://github.com/MikeRiveira/domain-security-checker/issues/3",
+      "title": "Add CSV output for spreadsheets",
+      "body": "Many IT teams track domains in Excel. A `--format csv` option would make it easy to paste results into a spreadsheet or attach them to a ticket.\n\n**Suggested behavior**\n- One row per domain and check: `domain,check,status,detail`.\n- Use Python's built-in `csv` module so commas and quotes in `detail` are escaped correctly.\n- Print to stdout like the other formats, so `domaincheck -c domains.toml -f csv > report.csv` works.\n\n**Where to start**\n- Add `render_csv` to `domaincheck/report.py`, next to `render_json`.\n- Add `\"csv\"` to the `--format` choices in `domaincheck/cli.py`.\n- Add a test in `tests/test_checks.py` like `test_markdown_and_json_render`, including a detail that contains a comma.",
+      "state": "open",
+      "labels": [
+        "enhancement",
+        "good first issue"
+      ],
+      "blockers": [],
+      "availability": "needs_review",
+      "checked_at": "2026-10-27T15:48:53.051808+00:00"
+    },
+    {
+      "candidate_id": "swecc-uw/swecc-oss-explorer#6",
+      "repository": "swecc-uw/swecc-oss-explorer",
+      "issue_number": 6,
+      "url": "https://github.com/swecc-uw/swecc-oss-explorer/issues/6",
+      "title": "[cli] Add --output csv/markdown formats",
+      "body": "## Problem\n`swecc-oss explore` supports `--json` (raw GitHub objects) but nothing in between. People piping into `jq`, importing into spreadsheets, or pasting results into Discord need friendlier formats.\n\n## Task\nAdd an `--output` option supporting `table` (default), `json` (slimmed-down objects: repo, number, title, labels, url, created, comments), `csv`, and `markdown`.\n\n## Acceptance criteria\n- [ ] `swecc-oss explore --output csv > issues.csv` opens cleanly in a spreadsheet\n- [ ] `--output markdown` renders a copy-pasteable table for READMEs/Discord\n- [ ] `--json` remains supported (consider making it an alias of `--output json`, deprecating gently)\n- [ ] New formats covered by tests\n\n## Files to look at\n`src/swecc_oss_explorer/cli.py` (`explore` command), `tests/`\n",
+      "state": "open",
+      "labels": [
+        "good first issue",
+        "area:cli"
+      ],
+      "blockers": [],
+      "availability": "needs_review",
+      "checked_at": "2026-10-27T15:48:53.302924+00:00"
+    }
+  ],
+  "check_failures": [],
+  "limitations": [
+    "Only the first page of one search was considered.",
+    "Direct checks cover basic issue metadata only.",
+    "Descriptions, comments, linked pull requests, and repository status still need review.",
+    "No candidate has been confirmed suitable or available."
+  ]
+}

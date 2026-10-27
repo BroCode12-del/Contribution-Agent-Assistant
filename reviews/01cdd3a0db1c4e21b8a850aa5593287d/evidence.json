@@ -1,0 +1,39 @@
+{
+  "evidence": [
+    {
+      "file": "cleaning.py",
+      "line": 10,
+      "line_end": 10,
+      "code": "pd.read_csv(data_folder / 'gaming_fps_dataset.csv')",
+      "observation": "Calls pandas.read_csv to load CSV data",
+      "verification": "static_code_only",
+      "id": "E1"
+    },
+    {
+      "file": "cleaning.py",
+      "line": 11,
+      "line_end": 11,
+      "code": "pd.read_csv(data_folder / 'cpu_specifications.csv')",
+      "observation": "Calls pandas.read_csv to load CSV data",
+      "verification": "static_code_only",
+      "id": "E2"
+    },
+    {
+      "file": "cleaning.py",
+      "line": 12,
+      "line_end": 12,
+      "code": "pd.read_csv(data_folder / 'gpu_1986-2026.csv')",
+      "observation": "Calls pandas.read_csv to load CSV data",
+      "verification": "static_code_only",
+      "id": "E3"
+    }
+  ],
+  "skipped_files": [],
+  "all_python_files_parsed": true,
+  "review_id": "01cdd3a0db1c4e21b8a850aa5593287d",
+  "repository": "BroCode12-del/gaming-fps-prediction",
+  "commit_sha": "6f8963fc3328d8dc460c77f3460add4703aea79c",
+  "excluded_files": [],
+  "download_failures": [],
+  "coverage_note": "Parsing status covers downloaded Python files only, not every file in the repository."
+}

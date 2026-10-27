@@ -1,0 +1,14 @@
+{
+  "candidate_id": "basitalisandhu/agent-off-switch#6",
+  "input_sha256": "0136a3a69bbd0e7c2b9b0fcb185748136cdb477b4b2a57699e1380ef1d31e362",
+  "attempt_count": 1,
+  "review_id": "01cdd3a0db1c4e21b8a850aa5593287d",
+  "discovery_id": "17a5110ffc9f4d42924e4e7d4291f11b",
+  "created_at": "2026-10-27T16:36:11.564932+00:00",
+  "human_review_required": true,
+  "status": "failed",
+  "error": {
+    "type": "APIError",
+    "detail": "provider_deadline"
+  }
+}

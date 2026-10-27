@@ -1,0 +1,29 @@
+{
+  "practice_id": "P1-independent-1",
+  "parent_practice_id": "P1",
+  "opportunity_id": "O1",
+  "practice_sha256": "ab015b9d0ba9f5d2ac6f7f2499dd958e56cb6e5aa162b2d5532b782fa0c558a8",
+  "submission_sha256": "8829416f23b8a2827c50aa242edefa7dbc3df18dc7e8b85f033011fc3e2dc62b",
+  "submission_origin": "ai_written_reference",
+  "independent_ability_established": false,
+  "checks": [
+    {
+      "name": "Returns a pandas DataFrame",
+      "passed": true
+    },
+    {
+      "name": "Has the expected row count",
+      "passed": true
+    },
+    {
+      "name": "Preserves identifier strings",
+      "passed": true
+    },
+    {
+      "name": "Keeps expected numeric FPS values",
+      "passed": true
+    }
+  ],
+  "error": null,
+  "all_passed": true
+}

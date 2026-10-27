@@ -1,0 +1,52 @@
+{
+  "candidate_id": "MrMha/openfoundry#3",
+  "input_sha256": "c567c77012bb69c55cc4491e2b85c496a50e885fedbadde58716073423c26d71",
+  "attempt_count": 1,
+  "review_id": "01cdd3a0db1c4e21b8a850aa5593287d",
+  "discovery_id": "17a5110ffc9f4d42924e4e7d4291f11b",
+  "created_at": "2026-10-27T21:41:28.983521+00:00",
+  "human_review_required": true,
+  "status": "assessed",
+  "assessment": {
+    "candidate_id": "MrMha/openfoundry#3",
+    "requirements": [
+      {
+        "statement": "Add data_analyst module that computes row count, column names, missingness, bounded unique counts, and numeric min/max with explicit parsing failures.",
+        "source_quote": "Add `data_analyst` for an existing mission CSV: row count, column names, missingness, bounded unique counts and numeric min/max with explicit parsing failures."
+      },
+      {
+        "statement": "Use the standard-library CSV parser and enforce sandbox read limits of at most 10,000 rows/100 columns.",
+        "source_quote": "Use the standard-library CSV parser and sandbox read limits; enforce at most 10,000 rows/100 columns"
+      },
+      {
+        "statement": "Save a machine-readable profile and a Markdown report, recording truncation and inferred-type uncertainty.",
+        "source_quote": "save a machine-readable profile and Markdown report; record truncation and inferred-type uncertainty"
+      },
+      {
+        "statement": "Handle fixtures including quoted newlines, empty cells, malformed rows and invalid UTF-8 without executing formulas or interpolating cells as instructions.",
+        "source_quote": "Fixtures include quoted newlines, empty cells, malformed rows and invalid UTF-8. Never execute spreadsheet formulas or interpolate cells as instructions."
+      }
+    ],
+    "fit": [],
+    "gaps": [
+      "CSV writing/export functionality not established by supplied evidence; only pd.read_csv calls are present.",
+      "Standard-library CSV parser with row/column limit enforcement not addressed in the evidence.",
+      "Profile and Markdown report generation beyond reading CSV is not covered by the evidence.",
+      "Handling of malformed rows, quoted newlines, and invalid UTF-8 is not supported by the supplied evidence."
+    ],
+    "review_notes": [
+      "Evidence E1-E3 only contain pd.read_csv calls for loading CSV data; no export, GUI, test, or parsing\u2011limit code is present.",
+      "The requirements involve standard-library CSV parsing, row/column limits, report generation, and error handling beyond the supplied evidence.",
+      "Status is a saved snapshot, never confirmed availability; work may need additional evidence."
+    ]
+  },
+  "generation": {
+    "source": "Nightshift canonical attempt matched to saved assessment",
+    "source_job_id": "job_mvjq5c7v01",
+    "source_attempt_seq": 67,
+    "receipt_id": "rcpt_req_jegi203c",
+    "routed_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "elapsed_ms": 45003,
+    "from_cache": false
+  }
+}

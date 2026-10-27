@@ -1,0 +1,65 @@
+{
+  "candidate_id": "basitalisandhu/agent-off-switch#6",
+  "input_sha256": "7b1986ce3827108707d2849f13a98a9c94ed25f5236a086183243cecf653660d",
+  "attempt_count": 0,
+  "assessment_contract": "source_spans_v2",
+  "review_id": "01cdd3a0db1c4e21b8a850aa5593287d",
+  "discovery_id": "17a5110ffc9f4d42924e4e7d4291f11b",
+  "created_at": "2026-10-27T22:08:16.482919+00:00",
+  "human_review_required": true,
+  "status": "assessed",
+  "generation": {
+    "requested_model": "meterless/auto",
+    "tier_split": false,
+    "max_tokens": 8192,
+    "routed_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "receipt_id": "rcpt_req_e8iibjjj",
+    "from_cache": false,
+    "finish_reason": "stop",
+    "elapsed_seconds": 56.36
+  },
+  "assessment": {
+    "candidate_id": "basitalisandhu/agent-off-switch#6",
+    "requirements": [
+      {
+        "statement": "Add --format csv to aos review with columns rank, score, level, rule id, identity, message and fix",
+        "source_span_id": "Q1",
+        "source_quote": "Add `--format csv` to `aos review`, with the columns rank, score, level, rule id, identity, message and fix, so reviewers can open the findings in a spreadsheet.",
+        "start_char": 9,
+        "end_char": 170
+      },
+      {
+        "statement": "Implement CSV output using csv.DictWriter pattern as in inventory.py",
+        "source_span_id": "Q3",
+        "source_quote": "- `src/agent_off_switch/inventory.py` (`to_csv` is the pattern: `csv.DictWriter`, `lineterminator=\"\\n\"`)",
+        "start_char": 484,
+        "end_char": 588
+      },
+      {
+        "statement": "Ensure --format csv outputs header row plus findings ranked by score descending, rank starting at 1",
+        "source_span_id": "Q5",
+        "source_quote": "- `aos review examples/demo-tenant --format csv` prints a header row plus one row per finding, highest score first, rank starting at 1.",
+        "start_char": 639,
+        "end_char": 774
+      }
+    ],
+    "fit": [],
+    "gaps": [
+      "Standard-library CSV writer implementation not established by supplied evidence (E1-E3 only contain pd.read_csv calls)",
+      "CSV output format specification and acceptance criteria not addressed by the CSV reading evidence",
+      "GUI/CLI export functionality and test construction for CSV format not supported by the evidence",
+      "Handling of edge cases (commas, quotes in messages, round-trip through csv.reader) not established by the supplied evidence"
+    ],
+    "review_notes": [
+      "Status is a saved snapshot; availability never confirmed.",
+      "Supplied evidence (E1-E3) only demonstrates pandas CSV reading, not CSV writing, CLI export, or test generation.",
+      "Work may need additional evidence to satisfy acceptance criteria."
+    ]
+  },
+  "application_cache": {
+    "reused": true,
+    "source_run_id": "fb4c2548c4cd4a25b615c058919ae3b0",
+    "source_attempt_count": 1,
+    "note": "Exact assessment input and contract match; no new model request."
+  }
+}

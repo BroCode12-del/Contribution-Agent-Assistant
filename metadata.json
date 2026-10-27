@@ -1,0 +1,153 @@
+{
+  "project_name": "Evidence-Grounded Contribution Agent",
+  "status": "bounded_hackathon_demo_verified",
+  "sponsor_integrations": {
+    "nightshift": {
+      "role": "primary_ai_provider",
+      "model_lane_tested": "NVIDIA Nemotron 3.5 Lightning",
+      "features": [
+        "evidence_analysis",
+        "opportunity_assessment",
+        "practice_generation",
+        "practice_feedback"
+      ]
+    },
+    "zetaris": {
+      "role": "query_evidence_and_opportunities_together",
+      "database": "CONTRIBUTION_DEMO",
+      "tables": [
+        "evidence_report",
+        "opportunity_record"
+      ],
+      "implementation_file": "match_opportunity.py",
+      "implementation_files": [
+        "match_opportunity.py",
+        "learning_flow.py",
+        "zetaris_join.sql"
+      ],
+      "connected_flow": "Real engine join of selected review evidence and issue via query-local VALUES; no new persistent tables claimed."
+    },
+    "meterless_engine": {
+      "name": "H-MEM",
+      "source": "https://github.com/Meterless/Meterless/tree/main/engines/hmem",
+      "implementation": "official_reference_with_python_bridge",
+      "feature": "recalled_assistance_history_changes_learning_recommendation",
+      "implementation_files": [
+        "hmem_bridge.mts",
+        "memory_recommendation.py",
+        "learning_memory.mts",
+        "learning_flow.py"
+      ],
+      "test_command": "python memory_recommendation.py",
+      "expected_output": "PASS: recalled assistance history changes the recommendation.",
+      "limitations": [
+        "Uses deterministic mock embeddings and local JSON persistence.",
+        "Does not override opportunity holds or practice attempt limits.",
+        "Connected practice grades structured output, not uploaded Python or independent authorship."
+      ]
+    }
+  },
+  "assistance_disclosure": "Both current practice solutions were AI-written references; passing checks do not establish independent learner ability.",
+  "submission_schema_status": "Provisional project metadata; organiser-required schema has not been verified.",
+  "opportunity_discovery": {
+    "entry_point": "run_opportunities.py",
+    "preferences_file": "opportunity_preferences.json",
+    "max_candidates": 5,
+    "status_checks": [
+      "issue_metadata",
+      "repository_archived_or_disabled",
+      "bounded_issue_comments",
+      "bounded_timeline_pull_request_references"
+    ],
+    "ai_assessment_provider": "Nightshift Runtime (existing configured routing mode)",
+    "ranking_type": "relative_human_review_priority_not_implementation_suitability",
+    "test_command": "python -m unittest test_opportunity_pipeline test_opportunity_runner -v",
+    "limitations": [
+      "Two CSV-topic preferred-label searches; first pages only.",
+      "Provider failures remain explicitly unassessed.",
+      "Exact quotes and citation existence do not prove interpretation.",
+      "Availability is a bounded dated snapshot; human review required.",
+      "New records are queried through Zetaris as inline values, not registered as new persistent tables."
+    ],
+    "live_verification": {
+      "verified_at": "2026-10-27T22:20:29.123800+00:00",
+      "discovery_id": "17a5110ffc9f4d42924e4e7d4291f11b",
+      "run_id": "fb4c2548c4cd4a25b615c058919ae3b0",
+      "assessment_contract": "source_spans_v2",
+      "candidate_count": 5,
+      "status_checks_completed": true,
+      "accepted_ai_assessments": 3,
+      "held_without_ai": 1,
+      "failed_after_retry_limit": 1,
+      "ranking_status": "partial_assessments",
+      "evidence_file": "step10_verification.json",
+      "provider_reliability": "intermittent_provider_deadline_unresolved",
+      "resume_verified_no_new_requests": true
+    },
+    "fresh_status_reuse_verification": {
+      "run_id": "238b697197984378a1bbbe26bd354778",
+      "checked_candidates": 5,
+      "reused_assessments": 3,
+      "retained_exhausted_failure": 1,
+      "held_without_ai": 1,
+      "new_model_requests": 0
+    }
+  },
+  "interface": {
+    "entry_point": "api_server.py",
+    "url": "http://127.0.0.1:8000/",
+    "scope": "local_single_user_prototype",
+    "files": [
+      "index.html",
+      "app.js",
+      "style.css",
+      "api_server.py"
+    ],
+    "live_actions": [
+      "fetch_and_collect",
+      "nightshift_analysis",
+      "issue_discovery_status_checks",
+      "single_candidate_assessment",
+      "hmem_recall",
+      "zetaris_select_1",
+      "start_connected_practice",
+      "check_structured_output",
+      "automatic_followup_and_draft"
+    ],
+    "saved_demo": "Original O1 practice, feedback, capped decision, private outreach; separate from current review",
+    "limitations": [
+      "Provider errors remain visible; an exhausted candidate does not block other validated candidates.",
+      "Connected practice measures structured output on fixed CSV inputs; Python source and authorship are not verified.",
+      "Sending outreach is unavailable."
+    ],
+    "test_command": "python -m unittest test_api_server -v",
+    "connected_flow": {
+      "implementation": "learning_flow.py",
+      "practice_template": "csv-output-v1",
+      "grading": "deterministic_fixed_input_JSON_output",
+      "feedback": "measured_checks",
+      "memory": "official_HMEM_reference",
+      "max_attempts": 3,
+      "followup": "different_input_after_assisted_pass",
+      "outreach": "private_template_from_bound_records",
+      "verification": "connected_demo_verification.json"
+    }
+  },
+  "submission_preparation": {
+    "status": "core_demo_verified_recording_and_publication_pending",
+    "ready_for_submission": false,
+    "audit_file": "submission_audit.json",
+    "setup_guide": "SETUP.md",
+    "testing_guide": "TESTING.md",
+    "demo_script": "DEMO_SCRIPT.md",
+    "checklist": "SUBMISSION_CHECKLIST.md",
+    "recording_created": false,
+    "official_submission_schema_verified": false,
+    "offline_tests_passed": 100,
+    "isolated_python_install_verified": true,
+    "full_clean_install_verified": false,
+    "dependency_lock": "requirements-lock.txt",
+    "connected_flow_verified": true,
+    "recording_route": "RECORD_NOW.md"
+  }
+}

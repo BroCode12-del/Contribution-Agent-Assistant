@@ -1,0 +1,23 @@
+{
+  "practice_id": "P1",
+  "max_attempts": 3,
+  "seen_submissions": [
+    "c20e95757633c48d153f406c643a95513a57e2144655cb4b19b8bcc9edec3848:4025122facfa3554205062534a5cbb82189a45924acac413b947df975ed18176",
+    "ab015b9d0ba9f5d2ac6f7f2499dd958e56cb6e5aa162b2d5532b782fa0c558a8:1899351a4f541a8ab78254b8282ef39ebde31e611048d8455c182ceb9c79a337",
+    "ab015b9d0ba9f5d2ac6f7f2499dd958e56cb6e5aa162b2d5532b782fa0c558a8:8829416f23b8a2827c50aa242edefa7dbc3df18dc7e8b85f033011fc3e2dc62b"
+  ],
+  "latest_decision": {
+    "practice_id": "P1",
+    "opportunity_id": "O1",
+    "next_action": "stop_for_user_review",
+    "reason": "The practice attempt limit has been reached.",
+    "opportunity_decision": "hold",
+    "attempts_used": 3,
+    "max_attempts": 3
+  },
+  "pending_practice": {
+    "practice_id": "P1-independent-1",
+    "file": "followup_practice.json",
+    "sha256": "ab015b9d0ba9f5d2ac6f7f2499dd958e56cb6e5aa162b2d5532b782fa0c558a8"
+  }
+}

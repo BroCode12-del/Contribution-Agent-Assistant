@@ -1,0 +1,105 @@
+{
+  "verified_at": "2026-10-27T22:20:29.123800+00:00",
+  "review_id": "01cdd3a0db1c4e21b8a850aa5593287d",
+  "discovery_id": "17a5110ffc9f4d42924e4e7d4291f11b",
+  "run_id": "fb4c2548c4cd4a25b615c058919ae3b0",
+  "assessment_contract": "source_spans_v2",
+  "candidate_count": 5,
+  "status_checks_completed": true,
+  "accepted_ai_assessments": 3,
+  "held_without_ai": 1,
+  "failed_after_retry_limit": 1,
+  "ranking_status": "partial_assessments",
+  "result_file": "discoveries\\17a5110ffc9f4d42924e4e7d4291f11b\\runs\\01cdd3a0db1c4e21b8a850aa5593287d\\fb4c2548c4cd4a25b615c058919ae3b0\\ranking.json",
+  "results": [
+    {
+      "candidate_id": "MojeZcg/ClipQR#40",
+      "status": "failed",
+      "attempt_count": 2,
+      "generation": {
+        "requested_model": "meterless/auto",
+        "tier_split": false,
+        "max_tokens": 8192
+      },
+      "error": {
+        "type": "APIError",
+        "detail": "provider_deadline"
+      },
+      "hold_reasons": null
+    },
+    {
+      "candidate_id": "Hrishank21s/lead-generation-manager#2",
+      "status": "held",
+      "attempt_count": 0,
+      "generation": null,
+      "error": null,
+      "hold_reasons": [
+        "already_assigned"
+      ]
+    },
+    {
+      "candidate_id": "basitalisandhu/agent-off-switch#6",
+      "status": "assessed",
+      "attempt_count": 1,
+      "generation": {
+        "requested_model": "meterless/auto",
+        "tier_split": false,
+        "max_tokens": 8192,
+        "routed_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "receipt_id": "rcpt_req_e8iibjjj",
+        "from_cache": false,
+        "finish_reason": "stop",
+        "elapsed_seconds": 56.36
+      },
+      "error": null,
+      "hold_reasons": null
+    },
+    {
+      "candidate_id": "makingdreamscometrue/pontil#8",
+      "status": "assessed",
+      "attempt_count": 1,
+      "generation": {
+        "requested_model": "meterless/auto",
+        "tier_split": false,
+        "max_tokens": 8192,
+        "routed_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "receipt_id": "rcpt_req_l1ahgz6x",
+        "from_cache": false,
+        "finish_reason": "stop",
+        "elapsed_seconds": 59.21
+      },
+      "error": null,
+      "hold_reasons": null
+    },
+    {
+      "candidate_id": "MrMha/openfoundry#3",
+      "status": "assessed",
+      "attempt_count": 2,
+      "generation": {
+        "requested_model": "meterless/auto",
+        "tier_split": false,
+        "max_tokens": 8192,
+        "routed_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "receipt_id": "rcpt_req_yyiv917l",
+        "from_cache": false,
+        "finish_reason": "stop",
+        "elapsed_seconds": 47.06
+      },
+      "error": null,
+      "hold_reasons": null
+    }
+  ],
+  "validation": "Model selected source-span IDs; Python copied exact issue text and offsets. Every saved assessment passes source-span, quote, citation-ID, schema and completion validation. This does not prove semantic support or personal ability.",
+  "resume_verified_no_new_requests": true,
+  "offline_tests_passed": 82,
+  "ready_for_fully_reliable_live_demo": false,
+  "remaining_blocker": "ClipQR candidate hit Nightshift provider_deadline on both permitted attempts. No extra requests were sent.",
+  "previous_verification_runs": [
+    "cf544e87d6cb48d1846514962b6f1ab1"
+  ],
+  "limitations": [
+    "Three validated assessments do not establish implementation fit.",
+    "External provider reliability remains intermittent.",
+    "New discoveries are not connected to their own practice/feedback/outreach flow."
+  ]
+}

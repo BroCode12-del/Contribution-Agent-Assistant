@@ -1,0 +1,13 @@
+{
+    "opportunity_id": "O1",
+    "repository": "pandas-dev/pandas",
+    "issue_number": 67005,
+    "url": "https://github.com/pandas-dev/pandas/issues/67005",
+    "summary": "Investigate ambiguity between integer column names and dtype keys in read_csv.",
+    "topic": "pandas.read_csv",
+    "state_at_check": "open",
+    "availability": "blocked_pending_discussion",
+    "availability_reason": "The issue is labeled Needs Discussion and contributors are instructed to hold off on a pull request.",
+    "checked_on": "2026-10-26",
+    "source": "github_issue"
+  }

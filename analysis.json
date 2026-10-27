@@ -1,0 +1,28 @@
+{
+  "observations": [
+    {
+      "statement": "Multiple pandas.read_csv calls are used to load distinct CSV datasets.",
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E3"
+      ]
+    }
+  ],
+  "verification": "static_code_only",
+  "limitations": [
+    "Evidence covers selected Python code only.",
+    "Static analysis does not prove execution, correctness, authorship, or mastery.",
+    "Citation validation checks that IDs exist, not that they support each claim."
+  ],
+  "scan_coverage": {
+    "all_python_files_parsed": false,
+    "skipped_files": [
+      {
+        "file": "broken.py",
+        "reason": "syntax_error",
+        "line": 1
+      }
+    ]
+  }
+}

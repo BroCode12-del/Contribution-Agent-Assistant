@@ -1,0 +1,208 @@
+{
+  "run_id": "cf544e87d6cb48d1846514962b6f1ab1",
+  "review_id": "01cdd3a0db1c4e21b8a850aa5593287d",
+  "discovery_id": "17a5110ffc9f4d42924e4e7d4291f11b",
+  "checked_at": "2026-10-27T21:39:14.924981+00:00",
+  "evidence_sha256": "57b7c0b0f458ea4558902f9f2b748d78e834a61d47de95126c65b08a9e0c1cac",
+  "candidates": [
+    {
+      "candidate_id": "MojeZcg/ClipQR#40",
+      "repository": "MojeZcg/ClipQR",
+      "issue_number": 40,
+      "url": "https://github.com/MojeZcg/ClipQR/issues/40",
+      "title": "Exportar el historial a CSV / Export history to CSV",
+      "body": "**ES:** Un bot\u00f3n **Exportar CSV** en la ventana del historial (`clipqr/ui/history.py`), con fecha, tipo, texto y dato principal de cada c\u00f3digo. Los datos privados (DNI, tarjetas de embarque) ya no est\u00e1n en el historial. Con un test del formato del CSV.\n\n**EN:** An **Export CSV** button in the history window (`clipqr/ui/history.py`), with the date, type, text and main value of each code. Private data (ID cards, boarding passes) is already excluded from history. Include a test for the CSV format.",
+      "body_truncated": false,
+      "state": "open",
+      "labels": [
+        "enhancement",
+        "good first issue"
+      ],
+      "assignees": [],
+      "checked_at": "2026-10-27T21:39:11.754050+00:00",
+      "issue_updated_at": "2026-10-27T15:01:29Z",
+      "availability": "needs_review",
+      "blockers": [],
+      "comments": [],
+      "linked_pull_requests": [],
+      "repository_status": {
+        "private": false,
+        "archived": false,
+        "disabled": false,
+        "language": "Python",
+        "pushed_at": "2026-10-27T16:11:39Z"
+      },
+      "check_failures": [],
+      "context_complete": true,
+      "pagination": {
+        "comments_more_pages": false,
+        "timeline_more_pages": false
+      },
+      "review_required": true
+    },
+    {
+      "candidate_id": "basitalisandhu/agent-off-switch#6",
+      "repository": "basitalisandhu/agent-off-switch",
+      "issue_number": 6,
+      "url": "https://github.com/basitalisandhu/agent-off-switch/issues/6",
+      "title": "CSV output for review",
+      "body": "## What\n\nAdd `--format csv` to `aos review`, with the columns rank, score, level, rule id, identity, message and fix, so reviewers can open the findings in a spreadsheet.\n\n## Where to look\n\n- `src/agent_off_switch/cli.py` (the `review` subparser lists the formats; `inventory` already has a `csv` choice to copy)\n- `src/agent_off_switch/review.py` (add `to_csv(inv, found)` next to `to_markdown` and `to_json`; `Finding` has `rule_id`, `identity`, `score`, `level`, `message`, `fix`)\n- `src/agent_off_switch/inventory.py` (`to_csv` is the pattern: `csv.DictWriter`, `lineterminator=\"\\n\"`)\n- `tests/test_review.py`\n\n## Acceptance criteria\n\n- `aos review examples/demo-tenant --format csv` prints a header row plus one row per finding, highest score first, rank starting at 1.\n- Test: the row count equals the finding count.\n- Test: a message holding a comma and a quote survives a round trip through `csv.reader`.\n- The README or docs list the new format wherever the review formats are listed.\n\nEverything runs offline: build inputs inside the test with the helpers in `tests/conftest.py` (`demo_inv` is the demo tenant), and try the result on `examples/demo-tenant/`.\n\nSetup and checks are in CONTRIBUTING.md: `ruff check .` and `python -m pytest -q`. Comment here to claim it; small PRs are welcome.\n",
+      "body_truncated": false,
+      "state": "open",
+      "labels": [
+        "help wanted",
+        "good first issue",
+        "hacktoberfest"
+      ],
+      "assignees": [],
+      "checked_at": "2026-10-27T21:39:12.534375+00:00",
+      "issue_updated_at": "2026-10-16T05:46:21Z",
+      "availability": "needs_review",
+      "blockers": [],
+      "comments": [],
+      "linked_pull_requests": [],
+      "repository_status": {
+        "private": false,
+        "archived": false,
+        "disabled": false,
+        "language": "Python",
+        "pushed_at": "2026-10-26T10:33:07Z"
+      },
+      "check_failures": [],
+      "context_complete": true,
+      "pagination": {
+        "comments_more_pages": false,
+        "timeline_more_pages": false
+      },
+      "review_required": true
+    },
+    {
+      "candidate_id": "makingdreamscometrue/pontil#8",
+      "repository": "makingdreamscometrue/pontil",
+      "issue_number": 8,
+      "url": "https://github.com/makingdreamscometrue/pontil/issues/8",
+      "title": "Import: support the Trakt CSV export",
+      "body": "Netflix, IMDb and Letterboxd exports are recognised. Trakt is a common tracker for films and shows.\n\n**What to do**\n- `moteur.js`, function `lireExport()`: detect Trakt's CSV columns and map its 1-10 ratings like the IMDb case (IMDb ids are matched first via `PAR_IMDB`).\n- Do the same in `imports.py` for the local version.\n- Add a small fake CSV to the tests.",
+      "body_truncated": false,
+      "state": "open",
+      "labels": [
+        "good first issue"
+      ],
+      "assignees": [],
+      "checked_at": "2026-10-27T21:39:13.334976+00:00",
+      "issue_updated_at": "2026-10-27T10:09:36Z",
+      "availability": "needs_review",
+      "blockers": [],
+      "comments": [],
+      "linked_pull_requests": [],
+      "repository_status": {
+        "private": false,
+        "archived": false,
+        "disabled": false,
+        "language": "Python",
+        "pushed_at": "2026-10-27T11:39:55Z"
+      },
+      "check_failures": [],
+      "context_complete": true,
+      "pagination": {
+        "comments_more_pages": false,
+        "timeline_more_pages": false
+      },
+      "review_required": true
+    },
+    {
+      "candidate_id": "MrMha/openfoundry#3",
+      "repository": "MrMha/openfoundry",
+      "issue_number": 3,
+      "url": "https://github.com/MrMha/openfoundry/issues/3",
+      "title": "OF-03 \u2014 Data Analyst: bounded CSV profile",
+      "body": "**Labels:** `good first issue`, `department` \u00b7 **Size:** small\n\n**Scope:** Add `data_analyst` for an existing mission CSV: row count, column names, missingness, bounded unique counts and numeric min/max with explicit parsing failures.\n\n**Targets:** `backend/app/departments/data_analyst.py` **(new)**; `backend/tests/test_data_analyst.py` **(new)**; reuse `backend/app/core/memory_vault.py`.\n\n**Acceptance:** Use the standard-library CSV parser and sandbox read limits; enforce at most 10,000 rows/100 columns; save a machine-readable profile and Markdown report; record truncation and inferred-type uncertainty. Fixtures include quoted newlines, empty cells, malformed rows and invalid UTF-8. Never execute spreadsheet formulas or interpolate cells as instructions. No pandas dependency needed.\n\nSource: https://github.com/MrMha/openfoundry/blob/main/docs/GOOD_FIRST_ISSUES.md\n\nPlease comment before starting so work can be coordinated. Follow CONTRIBUTING.md and include focused deterministic tests.",
+      "body_truncated": false,
+      "state": "open",
+      "labels": [
+        "help wanted",
+        "good first issue"
+      ],
+      "assignees": [],
+      "checked_at": "2026-10-27T21:39:14.105556+00:00",
+      "issue_updated_at": "2026-10-19T13:55:14Z",
+      "availability": "needs_review",
+      "blockers": [],
+      "comments": [
+        {
+          "url": "https://github.com/MrMha/openfoundry/issues/3#issuecomment-6268923204",
+          "body": "Hi! I'd like to contribute to this issue. I\u2019m planning to implement the bounded CSV profiling functionality using Python\u2019s standard-library `csv` module, with focused tests for quoted newlines, missing values, malformed rows, and invalid UTF-8.\n\nI\u2019ll first review the existing memory vault implementation and contribution guidelines to make sure the solution follows the project\u2019s conventions. Is this issue available for me to work on? Thank you!",
+          "body_truncated": false,
+          "author_association": "NONE"
+        }
+      ],
+      "linked_pull_requests": [],
+      "repository_status": {
+        "private": false,
+        "archived": false,
+        "disabled": false,
+        "language": "Python",
+        "pushed_at": "2026-10-25T14:52:09Z"
+      },
+      "check_failures": [],
+      "context_complete": true,
+      "pagination": {
+        "comments_more_pages": false,
+        "timeline_more_pages": false
+      },
+      "review_required": true
+    },
+    {
+      "candidate_id": "Hrishank21s/lead-generation-manager#2",
+      "repository": "Hrishank21s/lead-generation-manager",
+      "issue_number": 2,
+      "url": "https://github.com/Hrishank21s/lead-generation-manager/issues/2",
+      "title": "Export leads to CSV",
+      "body": "Export every lead to a CSV file, so owners can open their pipeline in a spreadsheet or back it up.\n\n## Requirements\n\n1. **CLI:** `python3 leadgen.py export` writes CSV to stdout, so this works:\n   `python3 leadgen.py export > leads.csv`\n   - Use the stdlib `csv` module. No third-party dependencies (see CONTRIBUTING.md).\n   - The first row is a header. Include **every column of the `leads` table**, in table order. Read the\n     columns from the database (for example `PRAGMA table_info(leads)` or `cursor.description`), not\n     from a hard-coded list, so columns added later are exported too.\n   - One row per lead, ordered by `id`.\n   - Multi-line fields (research, pitch, brief...) must stay in one cell: let `csv.writer` quote them.\n   - Show `export` in the usage text (the module docstring at the top of `leadgen.py`).\n2. **Download link (optional, welcome):** a \"Download CSV\" link on the Leads page served at\n   `GET /leads.csv`, with `Content-Type: text/csv; charset=utf-8` and\n   `Content-Disposition: attachment; filename=\"leads.csv\"`. Build the CSV with the **same function** as\n   the CLI. Don't write the logic twice.\n\n## Security checks (required)\n\n- `GET /leads.csv` must go through the existing `ok_origin()` check in `do_GET`, like every other route.\n  Don't add a route that skips it: this file holds every lead's contact details.\n- **CSV formula injection:** lead data comes from the web. Any cell that starts with `=`, `+`, `-`, `@`,\n  a tab or a carriage return must be prefixed with a single quote `'`, so Excel or Sheets doesn't run it\n  as a formula. Example: `=HYPERLINK(...)` becomes `'=HYPERLINK(...)`.\n- Don't log or write the export anywhere except stdout or the HTTP response.\n\n## Acceptance criteria\n\n- [ ] `python3 leadgen.py export` prints a header plus one row per lead, with all `leads` columns.\n- [ ] A lead whose notes span several lines round-trips through `csv.reader` unchanged.\n- [ ] A cell starting with `=` is exported with a leading `'`.\n- [ ] If the download link is added: `/leads.csv` returns 200 with a CSV attachment, and 403 when the\n      `Host` header is foreign (the same check as `test_cross_site_and_rebinding_blocked`).\n- [ ] No new dependencies; `leadgen.py` stays a single stdlib-only file.\n- [ ] README mentions the command (CLI section) and CHANGELOG has an `Unreleased` entry.\n\n## Testing\n\n- Add tests to `tests/test_leadgen.py` (they use a temp DB and never call Claude). Cover:\n  - the header and column set;\n  - the multi-line round-trip;\n  - the formula-injection prefix;\n  - the `/leads.csv` 200/403 cases, if you add the route.\n- Run `python3 -m unittest discover tests -v` locally. CI (ubuntu and macOS, Python 3.11 to 3.13) must\n  be green on the PR.\n\n## Out of scope\n\nImport from CSV, filtering the export by status, and other formats (JSON, XLSX). Open a separate issue\nif you want one of these.\n",
+      "body_truncated": false,
+      "state": "open",
+      "labels": [
+        "good first issue"
+      ],
+      "assignees": [
+        "pragna-tummala"
+      ],
+      "checked_at": "2026-10-27T21:39:14.924911+00:00",
+      "issue_updated_at": "2026-10-09T06:18:48Z",
+      "availability": "hold",
+      "blockers": [
+        "already_assigned"
+      ],
+      "comments": [
+        {
+          "url": "https://github.com/Hrishank21s/lead-generation-manager/issues/2#issuecomment-6074381077",
+          "body": "Hi @Hrishank21s, I am a fresher looking to make my first open-source contribution. I have experience with Python and working with CSV formats. Could you please assign this issue to me? I would love to work on it!\n",
+          "body_truncated": false,
+          "author_association": "NONE"
+        },
+        {
+          "url": "https://github.com/Hrishank21s/lead-generation-manager/issues/2#issuecomment-6075527208",
+          "body": "Hi @pragna-tummala, welcome, and thanks for offering! This issue is yours. \ud83c\udf89\n\nI've updated the issue description with the exact requirements, the security checks, the acceptance criteria and what to test, so you know precisely what \"done\" means.\n\n**How to start**\n1. Fork the repo and create a branch (for example `csv-export`).\n2. Read [CONTRIBUTING.md](https://github.com/Hrishank21s/lead-generation-manager/blob/main/CONTRIBUTING.md). The key rules: stdlib only, and `leadgen.py` stays one file.\n3. Implement `python3 leadgen.py export`. The `/leads.csv` download link is optional, but welcome.\n4. Add tests to `tests/test_leadgen.py` and run `python3 -m unittest discover tests -v`.\n5. Open a PR against `main` with `Closes #2` in the description, and fill in the PR template.\n\nThe two security points (the `ok_origin()` check and the CSV formula-injection prefix) are required, because this file holds every lead's contact details and lead data comes from the open web.\n\nIf anything is unclear, ask here. A small, focused PR is perfect for a first contribution. Looking forward to it!\n",
+          "body_truncated": false,
+          "author_association": "OWNER"
+        }
+      ],
+      "linked_pull_requests": [],
+      "repository_status": {
+        "private": false,
+        "archived": false,
+        "disabled": false,
+        "language": "Python",
+        "pushed_at": "2026-10-09T06:37:29Z"
+      },
+      "check_failures": [],
+      "context_complete": true,
+      "pagination": {
+        "comments_more_pages": false,
+        "timeline_more_pages": false
+      },
+      "review_required": true
+    }
+  ],
+  "github_requests": 20
+}

@@ -1,0 +1,11 @@
+{
+  "practice_id": "P1-independent-1",
+  "submission_sha256": "1899351a4f541a8ab78254b8282ef39ebde31e611048d8455c182ceb9c79a337",
+  "message": "The function is still a placeholder. No output checks ran. Implement load_players(csv_text), then run check_followup.py again.",
+  "failed_checks": [],
+  "error": {
+    "type": "NotImplementedError",
+    "message": "Follow-up solution not written yet."
+  },
+  "opportunity_decision": "hold"
+}

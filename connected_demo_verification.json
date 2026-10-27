@@ -1,0 +1,28 @@
+{
+  "verified_at": "2026-10-27T22:54:34.648612+00:00",
+  "status": "passed",
+  "execution": "isolated verification using real Zetaris and official H-MEM reference engine",
+  "test_fixture": true,
+  "source_run_id": "fb4c2548c4cd4a25b615c058919ae3b0",
+  "review_id": "01cdd3a0db1c4e21b8a850aa5593287d",
+  "candidate_id": "makingdreamscometrue/pontil#8",
+  "zetaris_records": 3,
+  "zetaris_source_kind": "inline_query_values",
+  "first_feedback_action": "revise_import_result",
+  "after_assisted_pass": "request_independent_evidence",
+  "without_memory": "review_measured_practice",
+  "memory_ids": [
+    "mem-2",
+    "mem-1"
+  ],
+  "followup_created": true,
+  "attempts_used": 3,
+  "max_attempts": 3,
+  "fourth_attempt_rejected": true,
+  "final_action": "stop_for_user_review",
+  "draft_issue_binding_matches": true,
+  "outreach_sent": false,
+  "independent_ability_established": false,
+  "practice_measurement": "Structured output on fixed inputs; no submitted code execution or mastery claim.",
+  "real_project_state_unchanged": true
+}

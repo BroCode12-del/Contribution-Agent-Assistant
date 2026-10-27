@@ -1,0 +1,133 @@
+{
+  "review_id": "01cdd3a0db1c4e21b8a850aa5593287d",
+  "repository": "BroCode12-del/gaming-fps-prediction",
+  "commit_sha": "6f8963fc3328d8dc460c77f3460add4703aea79c",
+  "discovery_id": "17a5110ffc9f4d42924e4e7d4291f11b",
+  "run_id": "dea3c275db704e71874eacb3f500ae4c",
+  "status_checked_at": "2026-10-27T16:35:23.645103+00:00",
+  "ranking_method": "known blockers/status first; validated assessment presence second; CSV-reading title overlap third; candidate ID breaks ties",
+  "candidates": [
+    {
+      "candidate_id": "makingdreamscometrue/pontil#8",
+      "url": "https://github.com/makingdreamscometrue/pontil/issues/8",
+      "title": "Import: support the Trakt CSV export",
+      "availability": "needs_review",
+      "checked_at": "2026-10-27T16:35:21.078038+00:00",
+      "blockers": [],
+      "group": "needs_human_review",
+      "topic_relation": "csv_reading_related",
+      "topic_evidence_ids": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "assessment_status": "failed",
+      "assessment": null,
+      "assessment_error": {
+        "type": "APIError",
+        "detail": "provider_deadline"
+      },
+      "human_review_required": true,
+      "suitable_for_implementation": null,
+      "reason": "Review priority reflects CSV-reading topic overlap, assessment status, and known blockers; it does not establish readiness.",
+      "review_priority": 1
+    },
+    {
+      "candidate_id": "MrMha/openfoundry#3",
+      "url": "https://github.com/MrMha/openfoundry/issues/3",
+      "title": "OF-03 \u2014 Data Analyst: bounded CSV profile",
+      "availability": "needs_review",
+      "checked_at": "2026-10-27T16:35:22.305178+00:00",
+      "blockers": [],
+      "group": "needs_human_review",
+      "topic_relation": "csv_unspecified",
+      "topic_evidence_ids": [],
+      "assessment_status": "failed",
+      "assessment": null,
+      "assessment_error": {
+        "type": "APIError",
+        "detail": "provider_deadline"
+      },
+      "human_review_required": true,
+      "suitable_for_implementation": null,
+      "reason": "Review priority reflects CSV-reading topic overlap, assessment status, and known blockers; it does not establish readiness.",
+      "review_priority": 2
+    },
+    {
+      "candidate_id": "basitalisandhu/agent-off-switch#6",
+      "url": "https://github.com/basitalisandhu/agent-off-switch/issues/6",
+      "title": "CSV output for review",
+      "availability": "needs_review",
+      "checked_at": "2026-10-27T16:35:19.759450+00:00",
+      "blockers": [],
+      "group": "needs_human_review",
+      "topic_relation": "csv_writing_related",
+      "topic_evidence_ids": [],
+      "assessment_status": "failed",
+      "assessment": null,
+      "assessment_error": {
+        "type": "APIError",
+        "detail": "provider_deadline"
+      },
+      "human_review_required": true,
+      "suitable_for_implementation": null,
+      "reason": "Review priority reflects CSV-reading topic overlap, assessment status, and known blockers; it does not establish readiness.",
+      "review_priority": 3
+    },
+    {
+      "candidate_id": "MojeZcg/ClipQR#40",
+      "url": "https://github.com/MojeZcg/ClipQR/issues/40",
+      "title": "Exportar el historial a CSV / Export history to CSV",
+      "availability": "needs_review",
+      "checked_at": "2026-10-27T16:35:18.552015+00:00",
+      "blockers": [],
+      "group": "needs_human_review",
+      "topic_relation": "csv_writing_related",
+      "topic_evidence_ids": [],
+      "assessment_status": "failed",
+      "assessment": null,
+      "assessment_error": {
+        "type": "APIError",
+        "detail": "provider_deadline"
+      },
+      "human_review_required": true,
+      "suitable_for_implementation": null,
+      "reason": "Review priority reflects CSV-reading topic overlap, assessment status, and known blockers; it does not establish readiness.",
+      "review_priority": 4
+    },
+    {
+      "candidate_id": "Hrishank21s/lead-generation-manager#2",
+      "url": "https://github.com/Hrishank21s/lead-generation-manager/issues/2",
+      "title": "Export leads to CSV",
+      "availability": "hold",
+      "checked_at": "2026-10-27T16:35:23.645057+00:00",
+      "blockers": [
+        "already_assigned"
+      ],
+      "group": "held",
+      "topic_relation": "csv_writing_related",
+      "topic_evidence_ids": [],
+      "assessment_status": "failed",
+      "assessment": null,
+      "assessment_error": {
+        "type": "APIError",
+        "detail": "provider_deadline"
+      },
+      "human_review_required": true,
+      "suitable_for_implementation": null,
+      "reason": "Blocked candidates are held regardless of topical overlap.",
+      "review_priority": 5
+    }
+  ],
+  "assessment_failures": 5,
+  "status": "partial_assessments",
+  "limitations": [
+    "Ranking is relative review priority among a small search sample, not a skill score or best-job prediction.",
+    "Exact quotes and citation IDs are checked; their interpretation is not automatically proven.",
+    "CSV reading does not demonstrate writing, JavaScript, GUI development, tests, or debugging ability.",
+    "Status is a dated snapshot, not guaranteed availability. Check context_complete, pagination, and failures.",
+    "Timeline references are not proof of a closing PR; open references conservatively trigger review holds.",
+    "Code evidence is static and does not establish authorship or mastery. AI-written practice is not independent evidence.",
+    "This runner does not alter prior O1 decisions, practice limits, outreach, or Zetaris records."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "candidate_id": "Hrishank21s/lead-generation-manager#2",
+  "input_sha256": "11a908b44c5651ba369fbbc755cf09bac8db9194105e696c1b25036ee4f5c61c",
+  "attempt_count": 0,
+  "assessment_contract": "source_spans_v2",
+  "review_id": "01cdd3a0db1c4e21b8a850aa5593287d",
+  "discovery_id": "17a5110ffc9f4d42924e4e7d4291f11b",
+  "created_at": "2026-10-27T22:14:30.300286+00:00",
+  "human_review_required": true,
+  "status": "held",
+  "availability_decision": "hold",
+  "hold_reasons": [
+    "already_assigned"
+  ]
+}

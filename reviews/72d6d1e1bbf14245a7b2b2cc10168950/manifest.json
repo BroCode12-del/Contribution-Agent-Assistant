@@ -1,0 +1,125 @@
+{
+  "review_id": "72d6d1e1bbf14245a7b2b2cc10168950",
+  "repository": "BroCode12-del/gaming-fps-prediction",
+  "commit_sha": "6f8963fc3328d8dc460c77f3460add4703aea79c",
+  "tree_sha": "fdc925bf96896330f187d92e10bd15a36cf69cb0",
+  "status": "selected_files_downloaded",
+  "limits": {
+    "max_files": 20,
+    "max_file_bytes": 100000,
+    "max_total_bytes": 1000000
+  },
+  "selected_files": [
+    {
+      "path": "cleaning.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eea380a16fb537c0245494520f3fddebf7cc0ff6",
+      "size": 7017,
+      "url": "https://api.github.com/repos/BroCode12-del/gaming-fps-prediction/git/blobs/eea380a16fb537c0245494520f3fddebf7cc0ff6"
+    },
+    {
+      "path": "evaluation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "598cc5098652c97585e9fa0cb99cedf0b899598c",
+      "size": 989,
+      "url": "https://api.github.com/repos/BroCode12-del/gaming-fps-prediction/git/blobs/598cc5098652c97585e9fa0cb99cedf0b899598c"
+    },
+    {
+      "path": "important/gui.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8f4b652b2f6199fef855f8500b18b58f5aec8d8",
+      "size": 7997,
+      "url": "https://api.github.com/repos/BroCode12-del/gaming-fps-prediction/git/blobs/d8f4b652b2f6199fef855f8500b18b58f5aec8d8"
+    },
+    {
+      "path": "important/train.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9314f245bda66b716e54defef8a9b5cb0c869ace",
+      "size": 1610,
+      "url": "https://api.github.com/repos/BroCode12-del/gaming-fps-prediction/git/blobs/9314f245bda66b716e54defef8a9b5cb0c869ace"
+    },
+    {
+      "path": "main.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5596b44786f04e4810aefe9f8d712f08ed310f71",
+      "size": 528,
+      "url": "https://api.github.com/repos/BroCode12-del/gaming-fps-prediction/git/blobs/5596b44786f04e4810aefe9f8d712f08ed310f71"
+    },
+    {
+      "path": "old_models.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03ef078659e197d2b387feead8637ac13ebfd25b",
+      "size": 3522,
+      "url": "https://api.github.com/repos/BroCode12-del/gaming-fps-prediction/git/blobs/03ef078659e197d2b387feead8637ac13ebfd25b"
+    },
+    {
+      "path": "preprocessing.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15647828f423245219abb03d3d38b114d16ac38f",
+      "size": 1486,
+      "url": "https://api.github.com/repos/BroCode12-del/gaming-fps-prediction/git/blobs/15647828f423245219abb03d3d38b114d16ac38f"
+    }
+  ],
+  "excluded_files": [],
+  "downloaded_files": [
+    {
+      "file": "cleaning.py",
+      "bytes": 7017,
+      "blob_sha": "eea380a16fb537c0245494520f3fddebf7cc0ff6",
+      "sha256": "28d916c4d192f93e3e010931b193bf0a97d04dda0970abfc690585ed6eebce99",
+      "source_url": "https://raw.githubusercontent.com/BroCode12-del/gaming-fps-prediction/6f8963fc3328d8dc460c77f3460add4703aea79c/cleaning.py"
+    },
+    {
+      "file": "evaluation.py",
+      "bytes": 989,
+      "blob_sha": "598cc5098652c97585e9fa0cb99cedf0b899598c",
+      "sha256": "09f73756a3bb2548d44d1a8a3d9e6060cc92e594597a33e7da96af78a86daaca",
+      "source_url": "https://raw.githubusercontent.com/BroCode12-del/gaming-fps-prediction/6f8963fc3328d8dc460c77f3460add4703aea79c/evaluation.py"
+    },
+    {
+      "file": "important/gui.py",
+      "bytes": 7997,
+      "blob_sha": "d8f4b652b2f6199fef855f8500b18b58f5aec8d8",
+      "sha256": "6b089bbb24f221a91c64348a6ae3165ab5fadb9abe2cc9066c75d4f630b6b632",
+      "source_url": "https://raw.githubusercontent.com/BroCode12-del/gaming-fps-prediction/6f8963fc3328d8dc460c77f3460add4703aea79c/important/gui.py"
+    },
+    {
+      "file": "important/train.py",
+      "bytes": 1610,
+      "blob_sha": "9314f245bda66b716e54defef8a9b5cb0c869ace",
+      "sha256": "4f7eb33b7837b1fa2b16e085558cb7370ffd1aac6f5cd221dca54496ceda65d9",
+      "source_url": "https://raw.githubusercontent.com/BroCode12-del/gaming-fps-prediction/6f8963fc3328d8dc460c77f3460add4703aea79c/important/train.py"
+    },
+    {
+      "file": "main.py",
+      "bytes": 528,
+      "blob_sha": "5596b44786f04e4810aefe9f8d712f08ed310f71",
+      "sha256": "dfc31835c0454c385b134a16c45d8d1dabc295285c7e4018654ba09632cdfa11",
+      "source_url": "https://raw.githubusercontent.com/BroCode12-del/gaming-fps-prediction/6f8963fc3328d8dc460c77f3460add4703aea79c/main.py"
+    },
+    {
+      "file": "old_models.py",
+      "bytes": 3522,
+      "blob_sha": "03ef078659e197d2b387feead8637ac13ebfd25b",
+      "sha256": "c687856f8bbaaa22b8df6c8cca0180b73c3798330ad1495a600304050e10127b",
+      "source_url": "https://raw.githubusercontent.com/BroCode12-del/gaming-fps-prediction/6f8963fc3328d8dc460c77f3460add4703aea79c/old_models.py"
+    },
+    {
+      "file": "preprocessing.py",
+      "bytes": 1486,
+      "blob_sha": "15647828f423245219abb03d3d38b114d16ac38f",
+      "sha256": "9e7a8d7c1e4db8f35fb2dff778c369dc43f222c4fcedfa1e3090b6c58b4f4d97",
+      "source_url": "https://raw.githubusercontent.com/BroCode12-del/gaming-fps-prediction/6f8963fc3328d8dc460c77f3460add4703aea79c/preprocessing.py"
+    }
+  ],
+  "download_failures": [],
+  "transferred_bytes": 23149,
+  "saved_bytes": 23149
+}

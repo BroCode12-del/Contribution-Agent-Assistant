@@ -1,0 +1,39 @@
+{
+  "evidence": [
+    {
+      "file": "utils/cleaning.py",
+      "line": 10,
+      "line_end": 12,
+      "code": "pd.read_csv(\n        data_folder / 'gaming_fps_dataset.csv'\n        )",
+      "observation": "Calls pandas.read_csv to load CSV data",
+      "verification": "static_code_only",
+      "id": "E1"
+    },
+    {
+      "file": "utils/cleaning.py",
+      "line": 13,
+      "line_end": 13,
+      "code": "pd.read_csv(data_folder / 'cpu_specifications.csv')",
+      "observation": "Calls pandas.read_csv to load CSV data",
+      "verification": "static_code_only",
+      "id": "E2"
+    },
+    {
+      "file": "utils/cleaning.py",
+      "line": 14,
+      "line_end": 14,
+      "code": "pd.read_csv(data_folder / 'gpu_1986-2026.csv')",
+      "observation": "Calls pandas.read_csv to load CSV data",
+      "verification": "static_code_only",
+      "id": "E3"
+    }
+  ],
+  "skipped_files": [
+    {
+      "file": "broken.py",
+      "reason": "syntax_error",
+      "line": 1
+    }
+  ],
+  "all_python_files_parsed": false
+}

@@ -1,0 +1,38 @@
+{
+  "opportunity_id": "O1",
+  "fit": [
+    {
+      "statement": "Code contains a pd.read_csv call reading gaming_fps_dataset.csv via a data_folder path.",
+      "evidence_ids": [
+        "E1"
+      ]
+    },
+    {
+      "statement": "Code contains a pd.read_csv call reading cpu_specifications.csv via a data_folder path.",
+      "evidence_ids": [
+        "E2"
+      ]
+    },
+    {
+      "statement": "Code contains a pd.read_csv call reading gpu_1986-2026.csv via a data_folder path.",
+      "evidence_ids": [
+        "E3"
+      ]
+    }
+  ],
+  "gaps": [
+    "The supplied static code does not establish the ability to disambiguate integer column names from dtype keys in pd.read_csv.",
+    "The supplied static code does not verify execution correctness or authorship of the pandas data loading operations.",
+    "The supplied static code does not demonstrate how integer column names interact with dtype specifications in pd.read_csv calls."
+  ],
+  "decision": "hold",
+  "reason": "The issue is labeled Needs Discussion and contributors are instructed to hold off on a pull request.",
+  "verification": "static_code_only",
+  "availability_checked_on": "2026-10-26",
+  "limitations": [
+    "Selected Python evidence only; scan coverage is incomplete.",
+    "Static code does not prove execution, correctness, authorship, or mastery.",
+    "Citation checks establish that IDs exist, not that claims are supported.",
+    "Opportunity availability is a saved snapshot, not a live check."
+  ]
+}

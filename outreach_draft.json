@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "O1",
+  "draft": "I’m interested in learning about pandas CSV handling once the issue’s status has been reviewed. The reviewed repository contains pd.read_csv calls, according to limited static analysis (E1–E3); this does not establish my authorship or mastery. Separately, both practice solutions were AI-written references. Their passing checks on fixed inputs do not establish my independent ability. The saved availability snapshot says hold, so I am not requesting assignment or offering to implement the issue.",
+  "evidence_ids": [
+    "E1",
+    "E2",
+    "E3"
+  ],
+  "review_notes": [
+    "Repository observations come from limited static analysis and do not establish authorship or mastery.",
+    "Both practice solutions were AI-written references; passing checks on fixed inputs do not establish independent learner ability.",
+    "Availability is a saved snapshot dated 2026-10-26; it has not been checked live for this draft.",
+    "Opportunity decision remains hold. This draft is not approved for sending."
+  ],
+  "draft_status": "private_review_only",
+  "sending_allowed": false,
+  "approved_for_sending": false,
+  "sent": false,
+  "opportunity_decision": "hold",
+  "availability_checked_on": "2026-10-26",
+  "required_disclosures": [
+    "Repository observations come from limited static analysis and do not establish authorship or mastery.",
+    "Both practice solutions were AI-written references; passing checks on fixed inputs do not establish independent learner ability.",
+    "Availability is a saved snapshot dated 2026-10-26; it has not been checked live for this draft."
+  ],
+  "draft_origin": "ai_generated_then_assistant_edited",
+  "review_status": "assistant_wording_reviewed_user_approval_pending",
+  "saved_at": "2026-10-27T01:26:25.133356+00:00",
+  "validation_note": "Structure, word count, and citation existence checked; sending is not authorised."
+}
